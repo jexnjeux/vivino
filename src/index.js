@@ -6,9 +6,40 @@ import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
+ 
+  * {
+  box-sizing: border-box;
+  }
+  a {
+  text-decoration: none;
+  color: inherit;
+  }
+  img {
+    max-width: 100%;
+  }
+  button,
+  input {
+    outline: 0;
+    border: 0;
+    background: none;
+  }
+  html,
   body {
+    width: 100%;
+    height: 100%;
     font-family: 'Lato', sans-serif;
     color: #111111;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
   }
 `;
 
