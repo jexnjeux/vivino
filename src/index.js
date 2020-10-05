@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
   body {
     font-family: 'Lato', sans-serif;
-    color: #111111
+    color: #111111;
   }
 `;
 
