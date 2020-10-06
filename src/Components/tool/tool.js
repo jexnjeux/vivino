@@ -1,19 +1,28 @@
+import React from "react";
 import styled from "styled-components";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
 
-export const GeneralBtn = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  background-color: ${(props) => props.backgroundColor};
-  border: ${(props) => props.border};
+export const Btn = styled.button`
+  ${({ theme }) => theme.flex("center", "center")}
   border-radius: 80px;
-  border-style: outset;
   outline: none;
   cursor: pointer;
-
-  :hover {
-    background-color: ${(props) => props.hoverColor};
-  }
 `;
+
+export const starRating = (rating) => {
+  return (
+    <>
+      {Array(parseInt(rating))
+        .fill(2)
+        .map((el, i) => (
+          <BsStarFill key={i} size="13" color="#BB1628" />
+        ))}
+      {rating % 1 !== 0 && <BsStarHalf size="13" color="#BB1628" />}
+      {Array(Math.floor(5 - rating))
+        .fill(2)
+        .map((el, i) => (
+          <BsStarFill key={i} size="13" color="#E3E3E3" />
+        ))}
+    </>
+  );
+};

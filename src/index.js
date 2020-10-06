@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Routes from "./Routes";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle, css } from "styled-components";
 import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
- 
+
   * {
   box-sizing: border-box;
   }
@@ -22,6 +22,8 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
     border: 0;
     background: none;
+    font-family: inherit;
+    padding: 0;
   }
   html,
   body {
@@ -49,6 +51,12 @@ const themes = {
   themeRed: "#A31323",
   themeOrange: "#F7F3F0",
   backgroundColor: "#FAFAFA",
+  flex: (justify = null, align = null, direction = null) => css`
+    display: flex;
+    justify-content: ${justify};
+    align-items: ${align};
+    flex-direction: ${direction};
+  `,
 };
 
 ReactDOM.render(
