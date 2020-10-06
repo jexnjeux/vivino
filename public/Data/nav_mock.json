@@ -1,0 +1,782 @@
+{
+  "MainCategory": [
+    {
+      "id": 1,
+      "category": "Wines",
+      "subcategory": [
+        [
+          {
+            "id": 1,
+            "name": "Red",
+            "style": true
+          },
+          { "id": 2, "name": "Bordeux Red" },
+          { "id": 3, "name": "Burgundy Red" },
+          { "id": 4, "name": "Languedoc-Roussillon Red" },
+          { "id": 5, "name": "Southern Rhône Red" },
+          { "id": 6, "name": "Tuscan Red" }
+        ],
+        [
+          { "id": 1, "name": "White", "style": true },
+          { "id": 2, "name": "Burgundy White" },
+          { "id": 3, "name": "Languedoc-Roussillon White" },
+          { "id": 4, "name": "Upper Loire White" },
+          { "id": 5, "name": "Bordeaux White" },
+          { "id": 6, "name": "Southern Rhône White" }
+        ],
+        [
+          { "id": 1, "name": "Sparkling", "style": true },
+          { "id": 2, "name": "Rosé", "style": true },
+          { "id": 3, "name": "Fortified", "style": true },
+          { "id": 4, "name": "Dessert", "style": true }
+        ]
+      ],
+      "banner": [
+        {
+          "id": 1,
+          "alt": "banner1",
+          "img": "/images/1stBanner.jpg",
+          "text": "Browse top-rated sauvignon blanc"
+        },
+        {
+          "id": 2,
+          "alt": "banner2",
+          "img": "/images/2ndBanner.jpg",
+          "text": "Rare & Extraordinary wines for someone quite special"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Offers",
+      "subcategory": [
+        [
+          { "id": 1, "name": "Less than €10" },
+          { "id": 2, "name": "From €10 to €20" },
+          { "id": 3, "name": "From €20 to €50" },
+          { "id": 4, "name": "Over €50" }
+        ],
+        [
+          { "id": 1, "name": "Reds on offer" },
+          { "id": 2, "name": "Whites on offer" }
+        ]
+      ],
+      "banner": [
+        {
+          "id": 1,
+          "alt": "banner3",
+          "img": "/images/3rdBanner.jpg",
+          "text": "The best wine you can get below €10"
+        },
+        {
+          "id": 2,
+          "alt": "banner4",
+          "img": "/images/4thBanner.jpg",
+          "text": "Wines with awesome savings right now!"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Pairings",
+      "subcategory": [
+        [
+          { "id": 1, "name": "Beef", "icon": true },
+          { "id": 2, "name": "Lamb", "icon": true },
+          { "id": 3, "name": "Veal", "icon": true },
+          { "id": 4, "name": "Pork", "icon": true },
+          { "id": 5, "name": "Game (deer, venison)", "icon": true },
+          { "id": 6, "name": "Poultry", "icon": true },
+          { "id": 7, "name": "Mushrooms", "icon": true }
+        ],
+        [
+          { "id": 8, "name": "Cured meat", "icon": true },
+          { "id": 9, "name": "Goat Chese", "icon": true },
+          { "id": 10, "name": "Mature and hard cheese", "icon": true },
+          { "id": 11, "name": "Mild and soft cheese", "icon": true },
+          { "id": 12, "name": "Pasta", "icon": true },
+          { "id": 13, "name": "Spicy food", "icon": true }
+        ],
+        [
+          { "id": 14, "name": "Aperitif", "icon": true },
+          { "id": 15, "name": "Appetizers and snacks", "icon": true },
+          { "id": 16, "name": "Lean fish", "icon": true },
+          { "id": 17, "name": "Rich fish(Salmon, tuna etc)", "icon": true },
+          { "id": 18, "name": "Shellfish", "icon": true },
+          { "id": 19, "name": "Vegetarian", "icon": true }
+        ]
+      ],
+      "banner": [
+        {
+          "id": 5,
+          "alt": "banner5",
+          "img": "/images/5thBanner.jpg",
+          "text": "Goes incredibly well with steak..."
+        },
+        {
+          "id": 6,
+          "alt": "banner6",
+          "img": "/images/6thBanner.jpg",
+          "text": "Choose the perfect wine for soft cheese"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Grapes",
+      "subcategory": [
+        [
+          { "id": 1, "name": "Gabernet Sauvignon" },
+          { "id": 2, "name": "Merlot" },
+          { "id": 3, "name": "Chardonnay" },
+          { "id": 4, "name": "Pinot Noir" },
+          { "id": 5, "name": "Malbec" }
+        ],
+        [
+          { "id": 1, "name": "Sauvignon Blanc" },
+          { "id": 2, "name": "Shiraz/Syrah" },
+          { "id": 3, "name": "Zinfandel" },
+          { "id": 4, "name": "Nebbiolo" },
+          { "id": 5, "name": "Sangiovese" }
+        ],
+        [
+          { "id": 6, "name": "Pinot Grigio" },
+          { "id": 7, "name": "Riesling" },
+          { "id": 8, "name": "Chenin Blanc" },
+          { "id": 9, "name": "Moscato" },
+          { "id": 10, "name": "Albario" }
+        ]
+      ],
+      "banner": [
+        {
+          "id": 7,
+          "alt": "banner7",
+          "img": "/images/7thBanner.jpg",
+          "text": "Great Pinot Noir offers"
+        },
+        {
+          "id": 8,
+          "alt": "banner8",
+          "img": "/images/8thBanner.jpg",
+          "text": "Wine that will start any party!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Regions",
+      "subcategory": [
+        [
+          { "id": 1, "name": "France", "style": true },
+          { "id": 2, "name": "Bordeaux" },
+          { "id": 3, "name": "Languedoc-Roussillon" },
+          { "id": 4, "name": "Northern Rhône" },
+          { "id": 5, "name": "Southern Rhône" },
+          { "id": 6, "name": "Burgundy" }
+        ],
+        [
+          { "id": 1, "name": "Italy", "style": true },
+          { "id": 2, "name": "Piemonte" },
+          { "id": 3, "name": "Tuscany" },
+          { "id": 4, "name": "Puglia" },
+          { "id": 5, "name": "Veneto" }
+        ],
+        [
+          { "id": 1, "name": "Spain", "style": true },
+          { "id": 2, "name": "Catalunya" },
+          { "id": 3, "name": "Castilla y Leon" },
+          { "id": 4, "name": "Galicia" },
+          { "id": 5, "name": "Aragon" }
+        ],
+        [
+          { "id": 1, "name": "USA", "style": true },
+          { "id": 2, "name": "Portugal", "style": true },
+          { "id": 3, "name": "Chile", "style": true },
+          { "id": 4, "name": "New Zealand", "style": true },
+          { "id": 5, "name": "Australia", "style": true }
+        ]
+      ],
+      "banner": [
+        {
+          "id": 9,
+          "alt": "banner9",
+          "img": "/images/9thBanner.jpg",
+          "text": "Napa Valley’s most wanted"
+        },
+        {
+          "id": 10,
+          "alt": "banner10",
+          "img": "/images/10thBanner.jpg",
+          "text": "Top-notch Italian Barolo"
+        }
+      ]
+    }
+  ],
+
+  "product_list": [
+    {
+      "id": 1,
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": "Montrachet Grand Cru Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "6900",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Marquis de Laguiche",
+      "year": "2017",
+      "nation": "Spain",
+      "region": "Bordeaux",
+      "rating": "4.5",
+      "ratings": "100",
+      "price": "19.99",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Grand Cru Marquis de Laguiche",
+      "year": "2019",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "3.5",
+      "ratings": "123",
+      "price": "125",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": "Montrachet Grand Cru Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Grand Cru Marquis de Laguiche",
+      "year": "2019",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": "Montrachet Grand Cru Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Grand Cru Marquis de Laguiche",
+      "year": "2019",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": "Montrachet Grand Cru Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Grand Cru Marquis de Laguiche",
+      "year": "2019",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": "Montrachet Grand Cru Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Grand Cru Marquis de Laguiche",
+      "year": "2019",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": "Montrachet Grand Cru Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Marquis de Laguiche",
+      "year": "2017",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Grand Cru Marquis de Laguiche",
+      "year": "2019",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "imageUrl": "http://images.vivino.com/thumbs/1QoFUeYqQaCU07v4MBx8yw_pb_x300.png",
+      "winery": "Joseph Drouhin",
+      "wine_name": " Grand Cru Marquis de Laguiche",
+      "year": "2019",
+      "nation": "France",
+      "region": "Bordeaux",
+      "rating": "4.9",
+      "ratings": "44",
+      "price": "1690",
+      "percentage": "12",
+      "feature": "This vintage rates better than any other year for this wine",
+      "reviews": [
+        {
+          "id": 77,
+          "profile": "image url",
+          "username": "enjoywater",
+          "date": "14 Feb 2015"
+        },
+        {
+          "id": 78,
+          "profile": "image url",
+          "username": "waterenjoy",
+          "date": "29 May 1992"
+        }
+      ]
+    }
+  ],
+
+  "navCountry": [
+    "Australia",
+    "Belgium",
+    "Brazil",
+    "Canada",
+    "Denmark",
+    "France",
+    "Germany",
+    "Hong Kong",
+    "Ireland",
+    "Italy",
+    "Monaco",
+    "Netherlands",
+    "Singapore",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "United Kingdom"
+  ],
+
+  "navLanguage": [
+    "Dansk",
+    "Deutsch",
+    "English",
+    "Español",
+    "Français",
+    "Italiano",
+    "Nederlands",
+    "Português",
+    "Svenska"
+  ]
+}

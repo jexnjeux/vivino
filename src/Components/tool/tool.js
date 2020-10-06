@@ -6,6 +6,9 @@ export const Btn = styled.button`
   ${({ theme }) => theme.flex("center", "center")}
   border-radius: 80px;
   outline: none;
+  color: ${({ color }) => color};
+  font-size: ${({ fontSize }) => fontSize};
+  font-weight: ${({ fontWeight }) => fontWeight};
   cursor: pointer;
 `;
 
