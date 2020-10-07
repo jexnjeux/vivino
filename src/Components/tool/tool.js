@@ -9,15 +9,15 @@ export const Btn = styled.button`
   cursor: pointer;
 `;
 
-export const starRating = (rating) => {
+export const starRating = (rating, color = "#BB1628") => {
   return (
     <>
       {Array(parseInt(rating))
         .fill(2)
         .map((el, i) => (
-          <BsStarFill key={i} size="13" color="#BB1628" />
+          <BsStarFill key={i} size="13" color={color} />
         ))}
-      {rating % 1 !== 0 && <BsStarHalf size="13" color="#BB1628" />}
+      {rating % 1 !== 0 && <BsStarHalf size="13" color={color} />}
       {Array(Math.floor(5 - rating))
         .fill(2)
         .map((el, i) => (
