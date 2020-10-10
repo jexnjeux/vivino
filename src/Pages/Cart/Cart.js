@@ -1,15 +1,68 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { api } from "../../config/api";
 import CartItem from "./Components/CartItem";
 import { TITLE_TEXT } from "./textConstant";
 
 const Cart = () => {
   const [cartList, setCartList] = useState({});
-  useEffect(() => {
-    fetch("/Data/mock.json")
+
+  const fetchFunc = () => {
+    fetch(`${api}/orders/carts`, {
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    })
       .then((res) => res.json())
-      .then((result) => setCartList(result.product_list));
-  }, []);
+      .then((result) => {
+        const temp = {};
+        result.cart_list.result.map((item) => (temp[item.id] = item));
+        setCartList(temp);
+      });
+  };
+
+  const handleQuantity = (id, quantity, str) => {
+    fetch(`${api}/orders/carts`, {
+      method: "PATCH",
+      headers: {
+        Authorization:
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.Qq0oXYANstjhyDGnyKR658yxUNeE4R36ERuodLf0aMk",
+      },
+      body: JSON.stringify({
+        id,
+        quantity: str === "plus" ? quantity + 1 : quantity - 1,
+      }),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        setCartList({
+          ...cartList,
+          [id]: {
+            ...cartList[id],
+            quantity: result.patch.after_quantity,
+          },
+        });
+      });
+  };
+
+  const handleDelete = (id) => {
+    fetch(`${api}/orders/carts/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization:
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.Qq0oXYANstjhyDGnyKR658yxUNeE4R36ERuodLf0aMk",
+      },
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.message === "CART DO NOT EXIST") {
+          alert("❗️오류가 발생했습니다.");
+        } else {
+          alert("상품이 삭제되었습니다.");
+        }
+      });
+  };
+  useEffect(fetchFunc, []);
 
   return (
     <Wrapper>
@@ -21,7 +74,11 @@ const Cart = () => {
             </Title>
           ))}
         </TitleBox>
-        <CartItem cartList={cartList} />
+        <CartItem
+          cartList={cartList}
+          handleQuantity={handleQuantity}
+          handleDelete={handleDelete}
+        />
       </Container>
     </Wrapper>
   );
