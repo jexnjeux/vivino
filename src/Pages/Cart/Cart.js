@@ -6,7 +6,6 @@ import { TITLE_TEXT } from "./textConstant";
 
 const Cart = () => {
   const [cartList, setCartList] = useState({});
-
   const fetchFunc = () => {
     fetch(`${api}/orders/carts`, {
       headers: {
@@ -25,8 +24,7 @@ const Cart = () => {
     fetch(`${api}/orders/carts`, {
       method: "PATCH",
       headers: {
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.Qq0oXYANstjhyDGnyKR658yxUNeE4R36ERuodLf0aMk",
+        Authorization: localStorage.getItem("token"),
       },
       body: JSON.stringify({
         id,
@@ -49,8 +47,7 @@ const Cart = () => {
     fetch(`${api}/orders/carts/${id}`, {
       method: "DELETE",
       headers: {
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.Qq0oXYANstjhyDGnyKR658yxUNeE4R36ERuodLf0aMk",
+        Authorization: localStorage.getItem("token"),
       },
     })
       .then((res) => res.json())
@@ -59,6 +56,7 @@ const Cart = () => {
           alert("❗️오류가 발생했습니다.");
         } else {
           alert("상품이 삭제되었습니다.");
+          window.location.reload();
         }
       });
   };
