@@ -1,0 +1,1 @@
+export const TITLE_TEXT = ["PRODUCT", "QUANTITY", "ITEM PRICE", "TOTAL"];
