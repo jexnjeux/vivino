@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const TasteCharacteristics = ({ detail }) => {
-  const { taste_summary, bold, sweet, acidic } = Object.keys(detail) && detail;
+  // const { taste_summary, bold, sweet, acidic } = Object.keys(detail) && detail;
+  const { taste_summary, bold, sweet, acidic } = detail;
   return (
     <Container>
       <Title>What does this wine taste like?</Title>
@@ -11,21 +12,21 @@ const TasteCharacteristics = ({ detail }) => {
           <TasteRow>
             <Character>Light</Character>
             <Bar>
-              <IndicatorBar left={bold} />
+              <IndicatorBar left={`${bold}%`} />
             </Bar>
             <Character>Bold</Character>
           </TasteRow>
           <TasteRow>
             <Character>Dry</Character>
             <Bar>
-              <IndicatorBar left={sweet} />
+              <IndicatorBar left={`${sweet}%`} />
             </Bar>
             <Character>Sweet</Character>
           </TasteRow>
           <TasteRow>
             <Character>Soft</Character>
             <Bar>
-              <IndicatorBar left={acidic} />
+              <IndicatorBar left={`${acidic}%`} />
             </Bar>
             <Character>Acidic</Character>
           </TasteRow>
@@ -87,7 +88,7 @@ const IndicatorBar = styled.span`
   width: 15%;
   height: 8px;
   position: absolute;
-  left: ${(props) => props.left};
+  left: ${({ left }) => left};
   border-radius: 7px;
   background-color: #ba1628;
   z-index: 1;

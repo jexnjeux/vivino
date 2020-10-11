@@ -1,0 +1,104 @@
+{
+  "reviewData": [
+    {
+      "id": "1",
+      "rating": "5",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Chritian Bale",
+      "reviewDate": "18 Jun 2020",
+      "reviewNote": "🍾 having the honor to try out a first wine from the new owners of this chateau 🍇 70% grenache, 15% shiraz, 15% rolle 🔍 Completely organic, fermentation at 16°C 👀 pale/medium salmon 👃🏼 minerals chamomile lavender orange blossom 👅 strawberry raspberry minerals peach camomile butter ❤️ 9,5/10. I 💯 like this! Intense nose, long aftertaste. Everything works very well together. Interesting that 👃🏼 is different from 👅 ❗️If too warm > sticks to palate: caramel (🙁). If too cold > 👃🏼 is gone",
+      "thumbsUp": "27",
+      "chat": "5"
+    },
+    {
+      "id": "2",
+      "rating": "4.5",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Julie Delpy",
+      "reviewDate": "13 Aug 2020",
+      "reviewNote": "Arguably the best rosé I have ever tasted. Deeply intense nose of rose petal, strawberry, grapefruit. Wonderful colour, lingering layered taste of red fruit. Long finish 🍇 70% Grenache, 15% Syrah, 15% Rolle 👁 pale intensity, salmon 👃🏻 pronounced intensity, youthful Primary: camomile limestone lavender peach rose petal 👅 dry, high acidity, med alc, med body, pronounced intensity, long finish Primary: peach strawberry raspberry grapefruit Secondary: butter ⚖️ Crisp, pure, intense, exceptional 18/20",
+      "thumbsUp": "20",
+      "chat": "3"
+    },
+    {
+      "id": "3",
+      "rating": "5",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Timothee Chalamet",
+      "reviewDate": "21 Aug 2020",
+      "reviewNote": "Everything a perfect Rosé should be...deliciously smooth with a vibrant and clean finish. Incredibly well priced for the outstanding quality. I love the beautiful packaging as well. This is definitely my ‘Favori’ Rosè...",
+      "thumbsUp": "32",
+      "chat": "1"
+    },
+    {
+      "id": "4",
+      "rating": "4",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Rose Byrne",
+      "reviewDate": "5 Sep 2020",
+      "reviewNote": "Ideale apero on indian summer Friday",
+      "thumbsUp": "17",
+      "chat": "1"
+    },
+    {
+      "id": "5",
+      "rating": "3",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Frances McDormand",
+      "reviewDate": "25 Feb 2020",
+      "reviewNote": "Heerlijk aromatische rosé: perzik, framboos, wat pompelmoes en een toets (bloemige) kruidigheid (oranjebloesem, lavendel). Vol fruitige smaak met een iets kruidige afdronk die voor een rosé bijzonder lang aan houdt. Topper 👌",
+      "thumbsUp": "47",
+      "chat": "0"
+    },
+    {
+      "id": "6",
+      "rating": "4.5",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Tom Hardy",
+      "reviewDate": "15 May 2020",
+      "reviewNote": "Thank you Chateau Favori, you are the only thing keeping me sane during this lockdown, what a joy for your tastebuds, highly recommended!",
+      "thumbsUp": "2",
+      "chat": "0"
+    },
+    {
+      "id": "7",
+      "rating": "5",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Julianne Moore",
+      "reviewDate": "26 Aug 2020",
+      "reviewNote": "👍👍👍👍👍",
+      "thumbsUp": "0",
+      "chat": "0"
+    },
+    {
+      "id": "8",
+      "rating": "4",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Jake Gyllenhaal",
+      "reviewDate": "30 May 2020",
+      "reviewNote": "Un feu d’artifice au nez et à la première attaque. Une longueur surprenante. La preuve qu’un rosé peut être un vrai vin, qui plus est d’une toute belle qualité.",
+      "thumbsUp": "8",
+      "chat": "0"
+    },
+    {
+      "id": "9",
+      "rating": "5",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Eddie Redmayne",
+      "reviewDate": "9 Jul 2020",
+      "reviewNote": "Simply delicious!!!!",
+      "thumbsUp": "2",
+      "chat": "0"
+    },
+    {
+      "id": "10",
+      "rating": "4",
+      "src": "https://images.vivino.com/avatars/default_user.png",
+      "userName": "Charlize Theron",
+      "reviewDate": "18 May 2020",
+      "reviewNote": "Delicately balanced between fruity and dry. It gave me a glimpse of how sunsets taste.",
+      "thumbsUp": "3",
+      "chat": "0"
+    }
+  ]
+}

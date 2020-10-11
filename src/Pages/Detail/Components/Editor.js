@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const Editor = ({ detail }) => {
+const Editor = ({ detail, title }) => {
   const { editor_note, description } = Object.keys(detail) && detail;
 
   return (
-    <Container>
-      <EditorNote id="editorNote">
-        <p>EDITOR NOTE</p>
-        {editor_note}
-      </EditorNote>
-      {description?.map((text, i) => {
-        return (
-          <Propos key={i}>
-            <p>{TITLE[i]}</p>
-            {text}
-          </Propos>
-        );
-      })}
-    </Container>
+    <>
+      {Object.keys(detail).length > 0 && (
+        <Container>
+          <EditorNote id="editorNote">
+            <p>EDITOR NOTE</p>
+            {editor_note}
+          </EditorNote>
+          {description?.map((text, i) => {
+            return (
+              <Propos key={i}>
+                <p>{title[i]}</p>
+                {text}
+              </Propos>
+            );
+          })}
+        </Container>
+      )}
+    </>
   );
 };
 
@@ -27,10 +31,8 @@ export default Editor;
 const Container = styled.div`
   ${({ theme }) => theme.flex("center", "center", "column")}
   margin: 30px auto 0 auto;
-
   padding: 32px 150px;
   width: 1216px;
-  /* background-color: ${({ theme }) => theme.backgroundColor}; */
   background-color: #f7f3f0;
 `;
 
@@ -55,9 +57,3 @@ const Propos = styled.div`
     color: #6b3a0b;
   }
 `;
-const TITLE = [
-  "Présentation du vin",
-  "A propos du vin",
-  "A propos du domaine",
-  "A propos du vignoble",
-];

@@ -1,30 +1,82 @@
 {
-  "detailInfo": {
+  "product": {
     "id": 1,
     "image_url": "https://assets.sainsburys-groceries.co.uk/gol/8008354/1/640x640.jpg",
-    "winery": "Domaine de Cambes",
-    "wine_name": "Bordeaux",
-    "year": "2017",
-    "wine_type": "Red",
-    "nation": "Korea",
-    "region": "Bordeaux",
-    "rating": "4.3",
-    "ratings": "30",
-    "editor_note": "“Inspirée par François Mitjavile, du château Tertre Rotebœuf, cette cuvée Domaine de Cambes 2017 fut une réussite absolue. Fin, racé et aux nobles notes, ce flacon a conquis nos membres : 4,3★.”",
-    "feature": "GlogbalGlogbalGlogbalGlogbal ",
-    "highlight": ["Latest vintage available", "hjhjhjhjhjh vintage available"],
-    "percentage": "12",
-    "price": "30.23",
-    "merchant": "Vivino - France",
+    "type": "Red",
+    "winery": "Capdevielle",
+    "wine_name": "Ch\u00e2teau La Chapelle-Lescours Saint-\u00c9milion Grand Cru",
+    "year": 2015,
+    "nation": "France",
+    "region": "Libournais",
+    "rating": 3.978494623655914,
+    "ratings": 93,
+    "price": "28.00",
+    "percentage": null,
+    "feature": "Great value for money. Similar wines usually cost 10 times as much",
+    "editor_note": "\u201cTrouver des C\u00f4te-R\u00f4tie bons et accessibles est presque mission impossible ! Vivino vous a d\u00e9nich\u00e9 cette p\u00e9pite cach\u00e9e qu'est le C\u00f4te-R\u00f4tie du domaine familial Patrick Jasmin adoub\u00e9 16,5 Bettane+Desseauve.\u201d",
+    "merchant": "Cavagogo",
     "description": [
-      "Domaine noté 5★/5★ par le Guide Bettane+Desseauve, Château Tertre Roteboeuf est un monstre sacré du Bordelais. À sa tête, la légende François Mitjavile, un orfèvre de génie qui repousse année après année les limites de la perfection. Or, la famille Mitjavile a fondu pour le Domaine de Cambes, une propriété d'une dizaine d'hectares qui fait beaucoup parler d'elle. Vinifié par les équipes de Terte Roteboeuf, ce millésime 2017 est une nouvelle démonstration du savoir-faire familial ! Fin, racé et aux nobles notes de fleurs blanches, de sous-bois, de cèdre ou encore de truffe, ce flacon a séduit le critique américain Jeb Dunnuck qui lui a délivré un dithyrambique 94/100. Quant à notre communauté, elle l'a évalué 4,3★ sur l'ensemble des millésimes, un véritable gage de qualité. Offrez-vous un vin d'élite né de la main d'une légende bordelaise !",
-      "Le Domaine de Cambes 2017 s'ouvrira sur un bouquet noble et racé pianotant entre des notes de cassis, de graphite, de fleurs blanches, de sous-bois, de cèdre ou encore de truffe. Au palais, les tanins veloutés délivrent une matière ronde et gourmande aux notes de fruits noirs macérés. Fin, structuré et charnu, il est typique de la signature Mitjavile. Un grand vin !",
-      "François Mitjavile est le célèbre propriétaire de Château Tertre Rotebœuf à Saint-Émilion. Ce génie discret avait cherché, dans les années 80, à étendre le vignoble de son domaine mais cela n’a pas été possible ; la faute aux prix, trop élevés. Il s’intéresse alors à l’appellation Côtes de Bourg, moins à la mode et plus accessible, dont les sols argilo-calcaires et l’exposition plein sud l’interpellent. C’est ainsi qu’il décide d’acheter Château Roc de Cambes. Or le Domaine de Cambes appartient au Château Roc de Cambes mais il n'en est le second vin. Son terroir et borde l’estuaire de la Gironde, qui coule le long des coteaux, il s’agit donc de pieds de côte. Ici l’influence de la Gironde tempère le climat et ajoute ses limons.",
-      "Le vignoble du domaine s’étend sur une dizaine d’hectares idéalement situés en amphithéâtre sur un tertre argilo-calcaire orienté plein sud. Merlots et Cabernets Sauvignons y sont soignés selon les principes de l’agriculture raisonnée avec un enherbement permanent des vignes.Les baies sont récoltées manuellement à un niveau de maturité avancé.François Mitjavile pratique des extractions par longues infusions qui donnent à ses vins un goût inimitable de raisin. Les fermentations ont lieu en cuves ciment et le vin est élevé, longtemps, en fûts de chêne."
+      "Avec des noms comme la Mouline, la Landonne et la Turque, la C\u00f4te-R\u00f4tie s'est impos\u00e9e comme le berceau des plus grands vins du Rh\u00f4ne Nord. Malheureusement les prix s'en sont ressentis. Heureusement, il existe encore des p\u00e9pites cach\u00e9es comme cette cuv\u00e9e La Giroflarie du domaine familial Patrick Jasmin. Un vin au d\u00e9licat soyeux adoub\u00e9 par le Guide Bettane+Desseauve et \u00e0 tarif tr\u00e8s raisonnable. Un des meilleurs rapports prix/plaisirs de C\u00f4te-R\u00f4tie !",
+      "Le C\u00f4te R\u00f4tie La Giroflarie s'ouvre sur un incroyable nez de fruits rouges et d'\u00e9pices ainsi que sur des notes de violette si typiques des terroirs de la Vall\u00e9e du Rh\u00f4ne Nord. En bouche, vous serez saisis par la complexit\u00e9 des ar\u00f4mes de griotte et de myrtille m\u00eal\u00e9s a des notes empyreumatiques de fum\u00e9e et de chocolat. La structure tannique est soyeuse et d\u00e9licate. Un vin savoureux, fin et \u00e9l\u00e9gant d'une belle intensit\u00e9 pr\u00e9sent\u00e9 sur le grandiloquent mill\u00e9sime 2017. Une v\u00e9ritable r\u00e9ussite pour le vignoble.",
+      "Le domaine Patrick Jasmin, c'est une toute petite propri\u00e9t\u00e9 d'\u00e0 peine 6 hectares en coteaux implant\u00e9s sur 12 parcelles d'appellation C\u00f4te R\u00f4tie et sur 9 lieux dits. Vignerons de p\u00e8re en fils depuis quatre g\u00e9n\u00e9rations, Patrick Jasmin travaille depuis 1978 sur le domaine familial. Fin gourmet et passionn\u00e9, Patrick tient de son p\u00e8re Robert et de son grand-p\u00e8re Georges le double savoir, h\u00e9rit\u00e9 et acquis. Un savoir-faire r\u00e9compens\u00e9 encore cette ann\u00e9e par le Guide Bettane+Desseauve.",
+      "Avec des noms comme la mouline, la landonne et la turque, toutes issues de chez E. Guigal. Ou avec des domaines comme Jaboulet, Jamet, Ogier ou Vernay, la C\u00f4te-R\u00f4tie s'est impos\u00e9e comme le berceau des plus grands vins du Rh\u00f4ne Nord. C'est ici que Patrick Jasmin bichonne ses 6 hectares en coteaux implant\u00e9s sur 12 parcelles et 9 lieux dits que sont la C\u00f4te-Blonde, le Mollard, Baleyat, le Truchet, les Moutonnes, C\u00f4te-Baudin, Les Bercheries, les L\u00e9sardes et le Coteau de Bassenon. Vall\u00e9e du Rh\u00f4ne nord, c'est la magistrale Syrah qui pr\u00e9domine puisque plant\u00e9e a 95% sur le domaine. Elle apportera structure, tanins, fruits rouges rac\u00e9s et cette touche de violette si caract\u00e9ristique du vignoble. L'assemblage est compl\u00e9t\u00e9 par 5% de Viognier qui apportera rondeur et fruit\u00e9."
     ],
-    "taste_summary": "The taste profile of Roc de Cambes Côtes de Bourg is based on 1060 user reviews",
-    "bold": "15%",
-    "sweet": "70%",
-    "acidic": "60%"
+    "highlight": [
+      "Great value for money. Similar wines usually cost 10 times as much.",
+      "This vintage rates better than any other year for this wine"
+    ],
+    "taste_summary": "The taste profile of Capdevielle Ch\u00e2teau La Chapelle-Lescours Saint-\u00c9milion Grand Cru is based on 55 user reviews",
+    "bold": "75.00",
+    "sweet": "60.00",
+    "acidic": "50.00",
+    "score": [30, 31, 32, 0, 0],
+    "wishlist": false,
+    "vintages": [
+      {
+        "id": 1,
+        "year": 2015,
+        "rating": 3.978494623655914,
+        "ratings": 93,
+        "price": "28.00",
+        "percentage": null,
+        "feature": "Great value for money. Similar wines usually cost 10 times as much"
+      },
+      {
+        "id": 2,
+        "year": 2014,
+        "rating": 4.036458333333333,
+        "ratings": 192,
+        "price": "24.50",
+        "percentage": null,
+        "feature": null
+      },
+      {
+        "id": 3,
+        "year": 2013,
+        "rating": 3.8541666666666665,
+        "ratings": 48,
+        "price": "27.00",
+        "percentage": null,
+        "feature": "A top rated year of this wine"
+      },
+      {
+        "id": 4,
+        "year": 2012,
+        "rating": 3.9805825242718447,
+        "ratings": 103,
+        "price": "29.00",
+        "percentage": null,
+        "feature": null
+      },
+      {
+        "id": 5,
+        "year": 2011,
+        "rating": 3.9623655913978495,
+        "ratings": 186,
+        "price": "27.30",
+        "percentage": null,
+        "feature": "Popular among Vivino users. More than 100 ratings"
+      }
+    ]
   }
 }

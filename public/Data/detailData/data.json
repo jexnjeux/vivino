@@ -1,0 +1,83 @@
+{
+  "product": {
+    "count": 63,
+    "id": 1,
+    "image_url": "https://assets.sainsburys-groceries.co.uk/gol/8008354/1/640x640.jpg",
+    "winery": "Domaine de Cambes",
+    "wine_name": "Bordeaux",
+    "year": "2017",
+    "type": "Red",
+    "nation": "Korea",
+    "region": "Bordeaux",
+    "rating": "4.3",
+    "ratings": "30",
+    "editor_note": "“Inspirée par François Mitjavile, du château Tertre Rotebœuf, cette cuvée Domaine de Cambes 2017 fut une réussite absolue. Fin, racé et aux nobles notes, ce flacon a conquis nos membres : 4,3★.”",
+    "feature": "Great value for money. Similar wines usually cost 10 times as much",
+    "highlight": [
+      "Great value for money. Similar wines usually cost 10 times as much.",
+      "This vintage rates better than any other year for this wine"
+    ],
+    "percentage": "12",
+    "price": "30.23",
+    "merchant": "Vivino - France",
+    "description": [
+      "Domaine noté 5★/5★ par le Guide Bettane+Desseauve, Château Tertre Roteboeuf est un monstre sacré du Bordelais. À sa tête, la légende François Mitjavile, un orfèvre de génie qui repousse année après année les limites de la perfection. Or, la famille Mitjavile a fondu pour le Domaine de Cambes, une propriété d'une dizaine d'hectares qui fait beaucoup parler d'elle. Vinifié par les équipes de Terte Roteboeuf, ce millésime 2017 est une nouvelle démonstration du savoir-faire familial ! Fin, racé et aux nobles notes de fleurs blanches, de sous-bois, de cèdre ou encore de truffe, ce flacon a séduit le critique américain Jeb Dunnuck qui lui a délivré un dithyrambique 94/100. Quant à notre communauté, elle l'a évalué 4,3★ sur l'ensemble des millésimes, un véritable gage de qualité. Offrez-vous un vin d'élite né de la main d'une légende bordelaise !",
+      "Le Domaine de Cambes 2017 s'ouvrira sur un bouquet noble et racé pianotant entre des notes de cassis, de graphite, de fleurs blanches, de sous-bois, de cèdre ou encore de truffe. Au palais, les tanins veloutés délivrent une matière ronde et gourmande aux notes de fruits noirs macérés. Fin, structuré et charnu, il est typique de la signature Mitjavile. Un grand vin !",
+      "François Mitjavile est le célèbre propriétaire de Château Tertre Rotebœuf à Saint-Émilion. Ce génie discret avait cherché, dans les années 80, à étendre le vignoble de son domaine mais cela n’a pas été possible ; la faute aux prix, trop élevés. Il s’intéresse alors à l’appellation Côtes de Bourg, moins à la mode et plus accessible, dont les sols argilo-calcaires et l’exposition plein sud l’interpellent. C’est ainsi qu’il décide d’acheter Château Roc de Cambes. Or le Domaine de Cambes appartient au Château Roc de Cambes mais il n'en est le second vin. Son terroir et borde l’estuaire de la Gironde, qui coule le long des coteaux, il s’agit donc de pieds de côte. Ici l’influence de la Gironde tempère le climat et ajoute ses limons.",
+      "Le vignoble du domaine s’étend sur une dizaine d’hectares idéalement situés en amphithéâtre sur un tertre argilo-calcaire orienté plein sud. Merlots et Cabernets Sauvignons y sont soignés selon les principes de l’agriculture raisonnée avec un enherbement permanent des vignes.Les baies sont récoltées manuellement à un niveau de maturité avancé.François Mitjavile pratique des extractions par longues infusions qui donnent à ses vins un goût inimitable de raisin. Les fermentations ont lieu en cuves ciment et le vin est élevé, longtemps, en fûts de chêne."
+    ],
+    "taste_summary": "The taste profile of Roc de Cambes Côtes de Bourg is based on 1060 user reviews",
+    "bold": "15%",
+    "sweet": "70%",
+    "acidic": "60%",
+    "score": [30, 31, 32, 0, 0],
+    "wishlist": false,
+    "vintages": [
+      {
+        "id": 1,
+        "year": 2015,
+        "rating": 3.978494623655914,
+        "ratings": 93,
+        "price": "28.00",
+        "percentage": null,
+        "feature": "Great value for money. Similar wines usually cost 10 times as much"
+      },
+      {
+        "id": 2,
+        "year": 2014,
+        "rating": 4.036458333333333,
+        "ratings": 192,
+        "price": "24.50",
+        "percentage": null,
+        "feature": null
+      },
+      {
+        "id": 3,
+        "year": 2013,
+        "rating": 3.8541666666666665,
+        "ratings": 48,
+        "price": "27.00",
+        "percentage": null,
+        "feature": "A top rated year of this wine"
+      },
+      {
+        "id": 4,
+        "year": 2012,
+        "rating": 3.9805825242718447,
+        "ratings": 103,
+        "price": "29.00",
+        "percentage": null,
+        "feature": null
+      },
+      {
+        "id": 5,
+        "year": 2011,
+        "rating": 3.9623655913978495,
+        "ratings": 186,
+        "price": "27.30",
+        "percentage": null,
+        "feature": "Popular among Vivino users. More than 100 ratings"
+      }
+    ]
+  }
+}

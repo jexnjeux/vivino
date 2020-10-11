@@ -3,21 +3,25 @@ import styled from "styled-components";
 import { GiWineGlass } from "react-icons/gi";
 
 const Highlights = ({ detail }) => {
-  const { highlight } = Object.keys(detail) && detail;
+  const { highlight } = detail;
   return (
-    <Container>
-      <Title>Highlights</Title>
-      {highlight?.map((text, i) => {
-        return (
-          <Highlight key={i}>
-            <Icon>
-              <GiWineGlass size="30" color="white" />
-            </Icon>
-            {text}
-          </Highlight>
-        );
-      })}
-    </Container>
+    <>
+      {Object.keys(detail).length > 0 && (
+        <Container>
+          <Title>Highlights</Title>
+          {highlight?.map((text, i) => {
+            return (
+              <Highlight key={i}>
+                <Icon>
+                  <GiWineGlass size="30" color="white" />
+                </Icon>
+                {text}
+              </Highlight>
+            );
+          })}
+        </Container>
+      )}
+    </>
   );
 };
 

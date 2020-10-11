@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Btn } from "../../Components/tool/tool";
+import { Btn } from "../../../Components/tool/tool";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { FiTruck } from "react-icons/fi";
 import { BiStore } from "react-icons/bi";

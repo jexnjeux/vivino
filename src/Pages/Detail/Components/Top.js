@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import PurchaseBox from "./PurchaseBox";
-import { starRating } from "../../Components/tool/tool";
+import { starRating } from "../../../Components/tool/tool";
 import { MdBookmark, MdBookmarkBorder } from "react-icons/md";
-import {
-  RiVipCrown2Line,
-  RiSeedlingLine,
-  RiThumbUpLine,
-  RiMusic2Line,
-  RiMoneyEuroCircleLine,
-} from "react-icons/ri";
 
-const Top = ({ detail }) => {
+const Top = ({ detail, flag, iconName, iconList }) => {
   const {
     winery,
     year,
@@ -26,6 +19,11 @@ const Top = ({ detail }) => {
   } = detail;
 
   const [checked, setChecked] = useState(false);
+
+  const handleIcon = () => {
+    return Object.keys(iconList).filter((item) => feature.indexOf(item) !== -1);
+  };
+
   return (
     <>
       {Object.keys(detail).length > 0 && (
@@ -40,7 +38,7 @@ const Top = ({ detail }) => {
                 </h1>
               </Title>
               <Location>
-                <img alt="flag" src={FLAG[nation]} />
+                <img alt="flag" src={flag[nation]} />
                 <p>
                   {wine_type}
                   {wine_type === ("Conac" || "Soju") ? " from " : " wine from "}
@@ -85,8 +83,8 @@ const Top = ({ detail }) => {
               </EditorNote>
               <FeatureBox>
                 <Feature>
-                  <Icon bgColor={ICON_NAME[feature[2]]}>
-                    {iconFunc(feature[2])}
+                  <Icon iconName={iconName} bgColor={handleIcon()}>
+                    {iconList[handleIcon()]}
                   </Icon>
                   <p>{feature}</p>
                 </Feature>
@@ -110,7 +108,6 @@ const TopRow = styled.div`
 
 const ProductDetail = styled.div`
   ${({ theme }) => theme.flex("center")}
-  /* 추가 */
   align-items:flex-start;
   padding: 48px 0;
   width: 1216px;
@@ -221,47 +218,7 @@ const Icon = styled.span`
   height: 32px;
   margin-left: 5px;
   border-radius: 16px;
-  background-color: ${({ bgColor }) => bgColor};
+  background-color: ${({ bgColor, iconName }) => iconName[bgColor]};
 `;
 
 const StarBox = styled.div``;
-
-const FLAG = {
-  France: "https://www.flaticon.com/svg/static/icons/svg/197/197560.svg",
-  Italy: "https://www.flaticon.com/svg/static/icons/svg/197/197626.svg",
-  Spain: "https://www.flaticon.com/svg/static/icons/svg/197/197593.svg",
-  Chile: "https://www.flaticon.com/svg/static/icons/svg/197/197586.svg",
-  Korea: "https://www.flaticon.com/svg/static/icons/svg/197/197582.svg",
-};
-
-const ICON_NAME = {
-  e: "#F35A5A",
-  p: "#F35AB4",
-  t: "#5A88F3",
-  i: "#3DDCA9",
-  o: "#7CCA2F",
-};
-
-const iconFunc = (letter) => {
-  let result;
-  switch (letter) {
-    case "e":
-      result = <RiVipCrown2Line size="20" color="white" />;
-      break;
-    case "p":
-      result = <RiSeedlingLine size="20" color="white" />;
-      break;
-    case "t":
-      result = <RiThumbUpLine size="20" color="white" />;
-      break;
-    case "i":
-      result = <RiMusic2Line size="20" color="white" />;
-      break;
-    case "o":
-      result = <RiMoneyEuroCircleLine size="20" color="white" />;
-      break;
-    default:
-      break;
-  }
-  return result;
-};
