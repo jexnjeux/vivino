@@ -12,13 +12,14 @@ const Main = () => {
     }
     return products;
   }
+
   const [products, getProducts] = useState([]);
 
-  const toplist = products.filter(({ratings}) => ratings > 100)
+  const toplist = products.filter(({rating}) => rating > 4)
   const related = shuffleList(products)
   const editors =products.filter( ({editor_note}) => editor_note !== null )
-  const bestseller = products.filter((({editor_note}) => editor_note !== null ))
-  const affordable = products.filter((({editor_note}) => editor_note !== null ))
+  const bestseller = products.filter(({ratings}) => ratings > 100)
+  const affordable = products.filter((({price}) => price < 25 ))
 
   useEffect(() => { 
     getList();
@@ -32,8 +33,6 @@ const Main = () => {
       });
   }
 
-  
-  
   return (
     <MainWrap>
       {console.log(products)}
@@ -176,43 +175,19 @@ const SortingBtnOne = styled(Btn)`
   background-size: 20px 16px;
 `;
 
-const SortingBtnTwo = styled(Btn)`
-  width: 70px;
-  height: 30px;
+const SortingBtnTwo = styled(SortingBtnOne)`
   background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid #a31323;
-  color: #ffffff;
-  margin: 0 8px 8px 0;
   background-image: url("/images/coin2.svg");
-  background-size: 20px 16px;
 `;
 
-const SortingBtnThree = styled(Btn)`
-  width: 70px;
-  height: 30px;
+const SortingBtnThree = styled(SortingBtnOne)`
   background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid #a31323;
-  color: #ffffff;
-  margin: 0 8px 8px 0;
   background-image: url("/images/coin3.svg");
-  background-size: 20px 16px;
 `;
 
-const SortingBtnFour = styled(Btn)`
-  width: 70px;
-  height: 30px;
+const SortingBtnFour = styled(SortingBtnOne)`
   background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid #a31323;
-  color: #ffffff;
-  margin: 0 8px 8px 0;
   background-image: url("/images/coin4.svg");
-  background-size: 20px 16px;
 `;
 
 const BottomText = styled.div`

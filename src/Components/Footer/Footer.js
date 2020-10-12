@@ -12,24 +12,13 @@ const Footer = () => {
               Trusted by millions to discover and buy the right wine every time.
             </p>
             <IconWrap>
-              <IconBox>
-                <img alt="icon1" src="/Images/footerIcon1.svg" />
-                <IconText>Shop the world’s largest wine marketplace</IconText>
-              </IconBox>
-              <IconBox>
-                <img alt="icon2" src="/Images/footerIcon2.svg" />
-                <IconText>Our support team is always here to help</IconText>
-              </IconBox>
-              <IconBox>
-                <img alt="icon3" src="/Images/footerIcon3.svg" />
-                <IconText>Careful delivery right to your doorstep</IconText>
-              </IconBox>
-              <IconBox>
-                <img alt="icon4" src="/Images/footerIcon4.svg" />
-                <IconText>
-                  Check honest reviews of any wine before purchase
-                </IconText>
-              </IconBox>
+              {STATIC.FOOTER_DESCRIPTION.map((el,idx) => (
+              
+                <IconBox>
+                  <img alt={el.alt} src={el.src} />
+                  <IconText>{el.text}</IconText>
+                </IconBox>
+              ))}
             </IconWrap>
           </Top>
         </TopWrap>
@@ -42,13 +31,9 @@ const Footer = () => {
               </Download>
               <Payment>
                 <PayWrap>
-                  <img src="/images/visa.svg" alt="visa" />
-                  <img src="/images/amex.svg" alt="amex" />
-                  <img src="/images/mastercard.svg" alt="mastercard" />
-                  <img src="/images/discover.svg" alt="discover" />
-                  <img src="/images/applepay.svg" alt="applepay" />
-                  <img src="/images/googlepay.svg" alt="googlepay" />
-                  <img src="/images/paypal.svg" alt="paypal" />
+                  {STATIC.PAYMENT.map((el,idx) => (
+                    <img alt={el.alt} src={el.src} key={idx}/>
+                  ))}
                 </PayWrap>
                 <PayText>Payment options will vary by merchant</PayText>
               </Payment>

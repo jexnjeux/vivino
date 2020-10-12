@@ -22,40 +22,41 @@ const Slider = ({products}) => {
     <RelativeWrap>
       <SliderWrap>
         {products.map((product, index) => {
+          const {rating, ratings, wine_name, image_url, winery, region, nation, price} = product;
           return <Slide key={index} style={{transform: `translateX(${x}%)`}}>
             <SlideTop>
               <TopLeft>
                 <Score>
-                  {product.rating.toFixed(1)}
+                  {rating.toFixed(1)}
                 </Score>
                 <Star>
-                  {starRating(product.rating)}
+                  {starRating(rating)}
                 </Star>
                 <RatingCtn>
-                  {product.ratings} ratings
+                  {ratings} ratings
                 </RatingCtn>
               </TopLeft>
               <TopRight>
-                <WineImg alt={product.wine_name} src={product.image_url}></WineImg>
+                <WineImg alt={wine_name} src={image_url}></WineImg>
               </TopRight>
             </SlideTop>
             <SlideMid>
               <TitleWrap>
-                <Winery>{product.winery}</Winery>
+                <Winery>{winery}</Winery>
                 <WineName>
-                {product.wine_name}
+                {wine_name}
                 </WineName>
               </TitleWrap>
               <DescriptionWrap>
                 <Flag><img alt="" src="#"></img></Flag>
                 <WineType>Rosé wine </WineType>
                 from
-                <Region> {product.region}</Region> - 
-                <Country>{product.nation}</Country>
+                <Region> {region}</Region> - 
+                <Country>{nation}</Country>
               </DescriptionWrap>
             </SlideMid>
             <SlideBottom>
-              <Price>€{Number(product.price).toLocaleString()}</Price>
+              <Price>€{Number(price).toLocaleString()}</Price>
               <CounterWrap>
                 <Counter>
                   <Minus onClick={()=>setCount(count - 1)}>-</Minus>

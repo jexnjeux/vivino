@@ -6,7 +6,6 @@ import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 import { GiWineGlass, GiMoneyStack, GiCheeseWedge, GiGrapes } from "react-icons/gi";
 import { GrLocation } from "react-icons/gr";
 
-
 const Nav = () => {
   const [mainCategory, setCategory] = useState([]);
   const [hoverOn, handleHover] = useState(false);
@@ -32,15 +31,11 @@ const Nav = () => {
   };
 
   const toggleCountry = () => {
-    return !displayCountry
-      ? [animateCountry(true),  animateLang(false)]
-      : [animateCountry(false),  animateLang(false)];
+      return [animateCountry(!displayCountry), animateLang(false)]
   };
 
   const toggleLang = () => {
-    return !displayLang
-      ? [animateCountry(false), animateLang(true)]
-      : [animateLang(false), animateCountry(false)];
+    return [animateLang(!displayLang), animateCountry(false)]
   };
 
   return (
@@ -53,7 +48,7 @@ const Nav = () => {
           </Search>
         </LeftSideWrap>
         <RightSideWrap>
-          <MenuWrapper onClick={()=>toggleCountry()}>
+          <MenuWrapper onClick={toggleCountry}>
             <TextWrapper>
               <Select>Ship to</Select>
               France
@@ -69,7 +64,7 @@ const Nav = () => {
               </DropCountry>
             }
           </MenuWrapper>
-          <MenuWrapper onClick={() => toggleLang()}>
+          <MenuWrapper onClick={toggleLang}>
             <TextWrapper>
               <Select>Language</Select>
               English
@@ -101,7 +96,7 @@ const Nav = () => {
                   key={category.id}
                   onMouseEnter={() => dropMenu(idx)}
                   onMouseLeave={() => handleHover(false)}
-                  hoverOn={hoverOn}>
+                  >
                   {MainIcons[idx]}
                   {category.category}
                   {hoverOn && navIndex === idx && (

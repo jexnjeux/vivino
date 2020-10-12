@@ -19,12 +19,7 @@ function DropDownMenu({ category }) {
       />
       <DropBodyWrap>
         {category.subcategory?.map((sub) => {
-          const styles = {
-            fontSize: "18px",
-            fontWeight: "400",
-            color: "#1d1d1d",
-          };
-
+          
           return (
             <DropBody>
               <ul>
@@ -46,7 +41,7 @@ function DropDownMenu({ category }) {
         <Banner>
           {category.banner.map((el, idx) => {
             return (
-              <BannerWrap>
+              <BannerWrap key={idx}>
                 <BannerImg alt={el.alt} src={el.img}></BannerImg>
                 <BannerText>{el.text}</BannerText>
               </BannerWrap>
@@ -66,6 +61,12 @@ export default DropDownMenu;
 const iconStyle = {
   width: "28px",
   height: "24px",
+};
+
+const styles = {
+  fontSize: "18px",
+  fontWeight: "400",
+  color: "#1d1d1d",
 };
 
 const SubIcons = [
