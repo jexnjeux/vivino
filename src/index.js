@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Routes from "./Routes";
-import { ThemeProvider, createGlobalStyle, css } from "styled-components";
-import reset from "styled-reset";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Routes from './Routes';
+import { ThemeProvider, createGlobalStyle, css } from 'styled-components';
+import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
@@ -46,11 +46,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const themes = {
-  themeBlack: "#111111",
-  themeGreen: "#028E76",
-  themeRed: "#A31323",
-  themeOrange: "#F7F3F0",
-  backgroundColor: "#FAFAFA",
+  themeBlack: '#111111',
+  themeGreen: '#028E76',
+  themeRed: '#A31323',
+  themeOrange: '#F7F3F0',
+  backgroundColor: '#FAFAFA',
   flex: (justify = null, align = null, direction = null) => css`
     display: flex;
     justify-content: ${justify};
@@ -66,5 +66,5 @@ ReactDOM.render(
       <Routes />
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
