@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { GiWineGlass } from "react-icons/gi";
-import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import React from 'react';
+import styled from 'styled-components';
+import { GiWineGlass } from 'react-icons/gi';
+import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 
 const Highlights = ({ detail, highlightList, HighligtColor }) => {
   const { highlight } = detail;
 
   const handleHighlight = (item) => {
-    // return Object.keys(highlightList)?.filter(
-    //   (item) => highlight.indexOf(item) !== -1
-    // );
+    return Object.keys(highlightList)?.filter(
+      (item) => highlight.indexOf(item) !== -1
+    );
   };
   console.log(highlightList);
   return (
@@ -22,8 +22,7 @@ const Highlights = ({ detail, highlightList, HighligtColor }) => {
               return (
                 <Highlight key={i}>
                   <Icon HighligtColor={HighligtColor}>
-                    {/* {highlightList[handleHighlight]} */}
-                    👍🏼
+                    {highlightList[handleHighlight]}
                   </Icon>
                   <Text>
                     <div>{text}</div>
@@ -41,7 +40,7 @@ const Highlights = ({ detail, highlightList, HighligtColor }) => {
 export default Highlights;
 
 const Container = styled.div`
-  ${({ theme }) => theme.flex(null, "center")}
+  ${({ theme }) => theme.flex(null, 'center')}
   margin: 0 auto;
   padding-top: 112px;
   width: 1216px;
@@ -73,7 +72,7 @@ const Text = styled.div`
   }
 `;
 const Icon = styled.span`
-  ${({ theme }) => theme.flex("center", "center")}
+  ${({ theme }) => theme.flex('center', 'center')}
   width: 48px;
   height: 48px;
   margin: 3px 20px 0 5px;

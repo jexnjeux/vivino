@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Top from "./Components/Top";
-import Editor from "./Components/Editor";
-import Highlights from "./Components/Highlights";
-import TasteCharacteristics from "./Components/TasteCharacteristics";
-import Review from "./Components/Review";
-import Vintage from "./Components/Vintage";
-import Facts from "./Components/Facts";
+import React, { useState, useEffect } from 'react';
+import Top from './Components/Top';
+import Editor from './Components/Editor';
+import Highlights from './Components/Highlights';
+import TasteCharacteristics from './Components/TasteCharacteristics';
+import Review from './Components/Review';
+import Vintage from './Components/Vintage';
+import Facts from './Components/Facts';
 import {
   RiVipCrown2Line,
   RiSeedlingLine,
@@ -14,8 +14,8 @@ import {
   RiMoneyEuroCircleLine,
   RiPercentLine,
   RiLoaderLine,
-} from "react-icons/ri";
-import { BsStarFill } from "react-icons/bs";
+} from 'react-icons/ri';
+import { BsStarFill } from 'react-icons/bs';
 
 const Detail = ({ match }) => {
   const [detail, setDetail] = useState({});
@@ -41,7 +41,7 @@ const Detail = ({ match }) => {
   };
 
   const getDetailInfo = () => {
-    fetch("/Data/detailData/detailData.json")
+    fetch('/Data/detailData/detailData.json')
       .then((res) => res.json())
       .then((res) => setDetail(res.product));
   };
@@ -58,7 +58,7 @@ const Detail = ({ match }) => {
   // };
 
   const getReviewData = () => {
-    fetch("/Data/detailData/reviewData.json")
+    fetch('/Data/detailData/reviewData.json')
       .then((res) => res.json())
       .then((res) => setReviewList(res.reviewData));
   };
@@ -72,7 +72,7 @@ const Detail = ({ match }) => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#FAFAFA" }}>
+    <div style={{ backgroundColor: '#FAFAFA' }}>
       <Top
         detail={detail}
         setDetail={setDetail}
@@ -111,54 +111,54 @@ const Detail = ({ match }) => {
 export default Detail;
 
 const FLAG = {
-  France: "https://www.flaticon.com/svg/static/icons/svg/197/197560.svg",
-  Italy: "https://www.flaticon.com/svg/static/icons/svg/197/197626.svg",
-  Spain: "https://www.flaticon.com/svg/static/icons/svg/197/197593.svg",
-  Chile: "https://www.flaticon.com/svg/static/icons/svg/197/197586.svg",
-  Korea: "https://www.flaticon.com/svg/static/icons/svg/197/197582.svg",
+  France: 'https://www.flaticon.com/svg/static/icons/svg/197/197560.svg',
+  Italy: 'https://www.flaticon.com/svg/static/icons/svg/197/197626.svg',
+  Spain: 'https://www.flaticon.com/svg/static/icons/svg/197/197593.svg',
+  Chile: 'https://www.flaticon.com/svg/static/icons/svg/197/197586.svg',
+  Korea: 'https://www.flaticon.com/svg/static/icons/svg/197/197582.svg',
 };
 
 const ICON_NAME = {
-  "top rated": "#F35A5A",
-  vintage: "#F35AB4",
-  "Great value": "#5A88F3",
-  Popular: "#3DDCA9",
-  "top 1%": "#7CCA2F",
+  'top rated': '#F35A5A',
+  vintage: '#F35AB4',
+  'Great value': '#5A88F3',
+  Popular: '#3DDCA9',
+  'top 1%': '#7CCA2F',
 };
 
 const iconList = {
-  "top rated": <RiVipCrown2Line size="20" color="white" />,
-  vintage: <RiSeedlingLine size="20" color="white" />,
-  "Great value": <RiThumbUpLine size="20" color="white" />,
-  Popular: <RiMusic2Line size="20" color="white" />,
-  "top 1%": <RiMoneyEuroCircleLine size="20" color="white" />,
+  'top rated': <RiVipCrown2Line size='20' color='white' />,
+  vintage: <RiSeedlingLine size='20' color='white' />,
+  'Great value': <RiThumbUpLine size='20' color='white' />,
+  Popular: <RiMusic2Line size='20' color='white' />,
+  'top 1%': <RiMoneyEuroCircleLine size='20' color='white' />,
 };
 
 const HighligtColor = {
-  money: "#F35A5A",
-  available: "#F35AB4",
-  traditional: "#5A88F3",
-  rates: "#3DDCA9",
-  top: "#7CCA2F",
-  discounted: "#2fbdca",
-  clear: "#ca2fc7",
+  money: '#F35A5A',
+  available: '#F35AB4',
+  traditional: '#5A88F3',
+  rates: '#3DDCA9',
+  top: '#7CCA2F',
+  discounted: '#2fbdca',
+  clear: '#ca2fc7',
 };
 
 const highlightList = {
-  top: <RiVipCrown2Line size="20" color="white" />,
-  available: <RiSeedlingLine size="20" color="white" />,
-  traditional: <RiMusic2Line size="20" color="white" />,
-  rates: <RiThumbUpLine size="20" color="white" />,
-  money: <RiMoneyEuroCircleLine size="20" color="white" />,
-  discounted: <RiPercentLine size="20" color="white" />,
-  clear: <RiLoaderLine size="20" color="white" />,
+  top: <RiVipCrown2Line size='20' color='white' />,
+  available: <RiSeedlingLine size='20' color='white' />,
+  traditional: <RiMusic2Line size='20' color='white' />,
+  rates: <RiThumbUpLine size='20' color='white' />,
+  money: <RiMoneyEuroCircleLine size='20' color='white' />,
+  discounted: <RiPercentLine size='20' color='white' />,
+  clear: <RiLoaderLine size='20' color='white' />,
 };
 
 const TITLE = [
-  "Présentation du vin",
-  "A propos du vin",
-  "A propos du domaine",
-  "A propos du vignoble",
+  'Présentation du vin',
+  'A propos du vin',
+  'A propos du domaine',
+  'A propos du vignoble',
 ];
 
 const STARS = (num) => {
@@ -167,8 +167,8 @@ const STARS = (num) => {
       {Array(num)
         .fill(2)
         .map((el, i) => (
-          <span key={i} style={{ marginRight: "2px" }}>
-            <BsStarFill height="16px" color="#f1a90d" />
+          <span key={i} style={{ marginRight: '2px' }}>
+            <BsStarFill height='16px' color='#f1a90d' />
           </span>
         ))}
     </>

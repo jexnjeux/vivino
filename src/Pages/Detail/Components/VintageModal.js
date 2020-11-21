@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
-import VintageRow from "./VintageRow";
-import { CgClose } from "react-icons/cg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
+import VintageRow from './VintageRow';
+import { CgClose } from 'react-icons/cg';
 
 const VintageModal = ({
   visible,
@@ -76,7 +76,7 @@ VintageModal.propTypes = {
 };
 
 const ModalOverlay = styled.div`
-  pointer-events: ${({ visible }) => (visible ? "initial" : "none")};
+  pointer-events: ${({ visible }) => (visible ? 'initial' : 'none')};
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: all 0.25s ease-in;
   position: fixed;
@@ -89,8 +89,8 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  pointer-events: ${({ visible }) => (visible ? "initial" : "none")};
-  transform: translateY(${({ visible }) => (visible ? "0" : "700px")});
+  pointer-events: ${({ visible }) => (visible ? 'initial' : 'none')};
+  transform: translateY(${({ visible }) => (visible ? '0' : '700px')});
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: all 0.25s ease-in;
   position: fixed;
@@ -103,7 +103,7 @@ const ModalWrapper = styled.div`
 `;
 
 const ModalInner = styled.div`
-  ${({ theme }) => theme.flex(null, null, "column")};
+  ${({ theme }) => theme.flex(null, null, 'column')};
   box-sizing: border-box;
   position: relative;
   box-shadow: 0 0 6px #ebebeb;
@@ -134,10 +134,10 @@ const DropDown = styled.div`
   position: relative;
 `;
 const iconStyle = {
-  position: "absolute",
-  width: "24px",
-  height: "24px",
-  right: "0",
+  position: 'absolute',
+  width: '24px',
+  height: '24px',
+  right: '0',
 };
 
 const SortContainer = styled.div`
@@ -158,20 +158,20 @@ const sortStyle = () => css`
 
 const SortTitle = styled.div`
   ${sortStyle}
-  ${({ theme }) => theme.flex("space-around", "center")};
+  ${({ theme }) => theme.flex('space-around', 'center')};
   height: 100%;
   cursor: pointer;
 `;
 
 const SortText = styled.span`
   display: inline-block;
-  width: ${({ listItem }) => listItem && "123px"};
-  transform: ${({ rotateOn }) => (rotateOn ? "rotate(90deg)" : "")};
+  width: ${({ listItem }) => listItem && '123px'};
+  transform: ${({ rotateOn }) => (rotateOn ? 'rotate(90deg)' : '')};
 `;
 
 const SortList = styled.ul`
   ${sortStyle}
-  display: ${({ displayOn }) => (displayOn ? "flex" : "none")};
+  display: ${({ displayOn }) => (displayOn ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: center;
   padding: 20px 16px;
@@ -191,9 +191,9 @@ const SortList = styled.ul`
 `;
 
 const options = [
-  { label: "Year", value: "year" },
-  { label: "Most popular", value: "popular" },
-  { label: "Highest user rating", value: "highRating" },
-  { label: "Lowest price first", value: "lowPrice" },
-  { label: "Highest price first", value: "highPrice" },
+  { label: 'Year', value: 'year' },
+  { label: 'Most popular', value: 'popular' },
+  { label: 'Highest user rating', value: 'highRating' },
+  { label: 'Lowest price first', value: 'lowPrice' },
+  { label: 'Highest price first', value: 'highPrice' },
 ];

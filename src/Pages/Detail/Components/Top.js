@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import PurchaseBox from "./PurchaseBox";
-import { starRating } from "../../../Components/tool/tool";
-import { MdBookmark, MdBookmarkBorder } from "react-icons/md";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import PurchaseBox from './PurchaseBox';
+import { starRating } from '../../../Components/tool/tool';
+import { MdBookmark, MdBookmarkBorder } from 'react-icons/md';
 
 const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
   const {
@@ -23,10 +23,10 @@ const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
   const handleWishlist = () => {
     setDetail({ ...detail, wishlist: !detail.wishlist });
     fetch(`http://13.209.10.86:8000/accounts/wishlist/${detail.id}`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: {
         Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.Qq0oXYANstjhyDGnyKR658yxUNeE4R36ERuodLf0aMk",
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.Qq0oXYANstjhyDGnyKR658yxUNeE4R36ERuodLf0aMk',
       },
     });
   };
@@ -40,7 +40,7 @@ const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
       {Object.keys(detail).length > 0 && (
         <TopRow>
           <ProductDetail>
-            <Img alt="wine" src={image_url} />
+            <Img alt='wine' src={image_url} />
             <Table>
               <Title>
                 <p>{winery}</p>
@@ -49,10 +49,10 @@ const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
                 </h1>
               </Title>
               <Location>
-                <img alt="flag" src={flag[nation]} />
+                <img alt='flag' src={flag[nation]} />
                 <p>
                   {wine_type}
-                  {wine_type === ("Conac" || "Soju") ? " from " : " wine from "}
+                  {wine_type === ('Conac' || 'Soju') ? ' from ' : ' wine from '}
                   <b>
                     {region} · {nation}
                   </b>
@@ -68,20 +68,20 @@ const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
                   {wishlist ? (
                     <MdBookmark
                       style={{
-                        width: "24px",
-                        height: "24px",
+                        width: '24px',
+                        height: '24px',
                       }}
                     />
                   ) : (
                     <MdBookmarkBorder
                       style={{
-                        width: "24px",
-                        height: "24px",
+                        width: '24px',
+                        height: '24px',
                       }}
                     />
                   )}
                   <WishTitle>
-                    {wishlist ? "Wishlisted" : "Add to Wishlist"}
+                    {wishlist ? 'Wishlisted' : 'Add to Wishlist'}
                   </WishTitle>
                 </Wishlist>
               </RateWishlist>
@@ -92,7 +92,7 @@ const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
                     <b>Editor's note:</b>
                     {editor_note}
                   </p>
-                  <a href="#editorNote">Read full Editor's note</a>
+                  <a href='#editorNote'>Read full Editor's note</a>
                 </EditorNote>
               ) : null}
               <FeatureBox>
@@ -101,7 +101,7 @@ const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
                     <Icon iconName={iconName} bgColor={handleIcon()}>
                       {iconList[handleIcon()]}
                     </Icon>
-                    <p>{feature}</p>
+                    z<p>{feature}</p>
                   </Feature>
                 ) : null}
               </FeatureBox>
@@ -117,13 +117,13 @@ const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
 export default Top;
 
 const TopRow = styled.div`
-  ${({ theme }) => theme.flex("center")}
+  ${({ theme }) => theme.flex('center')}
   padding: 0 48px;
   background-color: #f7f3f0;
 `;
 
 const ProductDetail = styled.div`
-  ${({ theme }) => theme.flex("center")}
+  ${({ theme }) => theme.flex('center')}
   align-items:flex-start;
   padding: 48px 0;
   width: 1216px;
@@ -135,7 +135,7 @@ const Img = styled.img`
 `;
 
 const Table = styled.div`
-  ${({ theme }) => theme.flex(null, null, "column")}
+  ${({ theme }) => theme.flex(null, null, 'column')}
   width: 50%;
 `;
 
@@ -153,7 +153,7 @@ const Title = styled.div`
 `;
 
 const Location = styled.div`
-  ${({ theme }) => theme.flex(null, "center")}
+  ${({ theme }) => theme.flex(null, 'center')}
   margin: 10px 16px;
   font-size: 18px;
   img {
@@ -167,7 +167,7 @@ const Location = styled.div`
 `;
 
 const RateWishlist = styled.div`
-  ${({ theme }) => theme.flex(null, "center")}
+  ${({ theme }) => theme.flex(null, 'center')}
   margin: 30px 16px;
   padding-right: 30px;
 `;
@@ -179,13 +179,13 @@ const Rating = styled.div`
 `;
 
 const StarRating = styled.div`
-  ${({ theme }) => theme.flex(null, null, "column")}
+  ${({ theme }) => theme.flex(null, null, 'column')}
   font-size: 12px;
   line-height: 1.1;
 `;
 
 const Wishlist = styled.div`
-  ${({ theme }) => theme.flex(null, "center")}
+  ${({ theme }) => theme.flex(null, 'center')}
   margin-left: 30px;
   padding: 0 16px;
   font-size: 16px;
@@ -211,7 +211,7 @@ const EditorNote = styled.div`
 `;
 
 const Feature = styled.span`
-  ${({ theme }) => theme.flex(null, "center")}
+  ${({ theme }) => theme.flex(null, 'center')}
   margin: 20px 16px;
   padding-right: 16px;
   height: 48px;
@@ -229,7 +229,7 @@ const FeatureBox = styled.div`
 `;
 
 const Icon = styled.span`
-  ${({ theme }) => theme.flex("center", "center")}
+  ${({ theme }) => theme.flex('center', 'center')}
   width: 32px;
   height: 32px;
   margin-left: 5px;
