@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
-import styled, { css } from "styled-components";
-import VintageModal from "./VintageModal";
-import VintageRow from "./VintageRow";
-import { starRating } from "../../../Components/tool/tool";
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
+import VintageModal from './VintageModal';
+import VintageRow from './VintageRow';
 
-const Vintage = ({ detail, iconList, iconName, stars, filters, setDetail }) => {
-  const { feature, vintages } = detail;
+const Vintage = ({ detail, iconList, iconName }) => {
+  const { feature } = detail;
 
-  const [vintageSort, setVintageSort] = useState("Year");
-  const [vintageValue, setVintageValue] = useState("");
+  const [vintageSort, setVintageSort] = useState('Year');
+  const [vintageValue, setVintageValue] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [sortedVintage, setSortedVintage] = useState([]);
   const [display, setDisplay] = useState(false);
@@ -40,7 +39,6 @@ const Vintage = ({ detail, iconList, iconName, stars, filters, setDetail }) => {
             Which Gérard Bertrand Domaine de L'Aigle Chardonnay Limoux vintage
             is the best to drink now?
           </SubTitle>
-
           <DropDown>
             <SortContainer>
               <SortTitle onClick={() => setDisplay(!display)}>
@@ -56,7 +54,6 @@ const Vintage = ({ detail, iconList, iconName, stars, filters, setDetail }) => {
               </SortList>
             </SortContainer>
           </DropDown>
-
           <VintageRow
             detail={detail}
             iconName={iconName}
@@ -134,20 +131,20 @@ const sortStyle = () => css`
 
 const SortTitle = styled.div`
   ${sortStyle}
-  ${({ theme }) => theme.flex("space-around", "center")};
+  ${({ theme }) => theme.flex('space-around', 'center')};
   height: 100%;
   cursor: pointer;
 `;
 
 const SortText = styled.span`
   display: inline-block;
-  width: ${({ listItem }) => listItem && "123px"};
-  transform: ${({ rotateOn }) => (rotateOn ? "rotate(90deg)" : "")};
+  width: ${({ listItem }) => listItem && '123px'};
+  transform: ${({ rotateOn }) => (rotateOn ? 'rotate(90deg)' : '')};
 `;
 
 const SortList = styled.ul`
   ${sortStyle}
-  display: ${({ displayOn }) => (displayOn ? "flex" : "none")};
+  display: ${({ displayOn }) => (displayOn ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: center;
   padding: 20px 16px;
@@ -167,9 +164,9 @@ const SortList = styled.ul`
 `;
 
 const options = [
-  { label: "Year", value: "year" },
-  { label: "Most popular", value: "popular" },
-  { label: "Highest user rating", value: "highRating" },
-  { label: "Lowest price first", value: "lowPrice" },
-  { label: "Highest price first", value: "highPrice" },
+  { label: 'Year', value: 'year' },
+  { label: 'Most popular', value: 'popular' },
+  { label: 'Highest user rating', value: 'highRating' },
+  { label: 'Lowest price first', value: 'lowPrice' },
+  { label: 'Highest price first', value: 'highPrice' },
 ];

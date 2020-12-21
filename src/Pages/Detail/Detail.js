@@ -17,7 +17,7 @@ import {
 } from 'react-icons/ri';
 import { BsStarFill } from 'react-icons/bs';
 
-const Detail = ({ match }) => {
+const Detail = () => {
   const [detail, setDetail] = useState({});
 
   const [reviewList, setReviewList] = useState({});
@@ -45,7 +45,6 @@ const Detail = ({ match }) => {
       .then((res) => res.json())
       .then((res) => setDetail(res.product));
   };
-  const num = match.params.id ? match.params.id : 60;
 
   // const getDetailInfo = () => {
   //   fetch(`http://13.209.10.86:8000/products/6`, {
@@ -164,13 +163,11 @@ const TITLE = [
 const STARS = (num) => {
   return (
     <>
-      {Array(num)
-        .fill(2)
-        .map((el, i) => (
-          <span key={i} style={{ marginRight: '2px' }}>
-            <BsStarFill height='16px' color='#f1a90d' />
-          </span>
-        ))}
+      {Array(num).fill(
+        <span style={{ marginRight: '2px' }}>
+          <BsStarFill height='16px' color='#f1a90d' />
+        </span>
+      )}
     </>
   );
 };

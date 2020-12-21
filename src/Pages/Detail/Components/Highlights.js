@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GiWineGlass } from 'react-icons/gi';
-import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 
 const Highlights = ({ detail, highlightList, HighligtColor }) => {
   const { highlight } = detail;
 
-  const handleHighlight = (item) => {
+  const handleHighlight = () => {
     return Object.keys(highlightList)?.filter(
       (item) => highlight.indexOf(item) !== -1
     );
@@ -21,8 +19,11 @@ const Highlights = ({ detail, highlightList, HighligtColor }) => {
             {highlight?.map((text, i) => {
               return (
                 <Highlight key={i}>
-                  <Icon HighligtColor={HighligtColor}>
-                    {highlightList[handleHighlight]}
+                  <Icon
+                    HighligtColor={HighligtColor}
+                    bgColor={handleHighlight()}
+                  >
+                    {highlightList[handleHighlight()]}
                   </Icon>
                   <Text>
                     <div>{text}</div>

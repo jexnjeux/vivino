@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { starRating } from "../../../Components/tool/tool";
-import { RiThumbUpLine, RiThumbUpFill, RiChat3Line } from "react-icons/ri";
-import { BsStarFill } from "react-icons/bs";
-const ReviewCard = ({ reviewMenu, handleBorder, review, stars }) => {
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { starRating } from '../../../Components/tool/tool';
+import { RiThumbUpLine, RiThumbUpFill, RiChat3Line } from 'react-icons/ri';
+const ReviewCard = ({ review }) => {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -19,7 +18,7 @@ const ReviewCard = ({ reviewMenu, handleBorder, review, stars }) => {
               <UserImg src={review.src} />
               <RatingInfo>
                 <StarBox>
-                  {starRating(Number(review.rating), "#f1a90d")}
+                  {starRating(Number(review.rating), '#f1a90d')}
                 </StarBox>
 
                 <UserName>{review.userName}</UserName>
@@ -33,17 +32,17 @@ const ReviewCard = ({ reviewMenu, handleBorder, review, stars }) => {
               <Thumbsup>
                 {!clicked ? (
                   <div onClick={() => handleClick()}>
-                    <RiThumbUpLine style={{ marginRight: "4px" }} />
+                    <RiThumbUpLine style={{ marginRight: '4px' }} />
                     {review.thumbsUp}
                   </div>
                 ) : (
                   <div onClick={() => handleClick()}>
-                    <RiThumbUpFill style={{ marginRight: "4px" }} />
+                    <RiThumbUpFill style={{ marginRight: '4px' }} />
                     {Number(review.thumbsUp) + 1}
                   </div>
                 )}
               </Thumbsup>
-              <RiChat3Line style={{ marginRight: "4px" }} />
+              <RiChat3Line style={{ marginRight: '4px' }} />
               {review.chat}
             </Icons>
           </Card>
@@ -67,7 +66,7 @@ const CardList = styled.div`
 `;
 
 const Card = styled.div`
-  ${({ theme }) => theme.flex("center", null, "column")}
+  ${({ theme }) => theme.flex('center', null, 'column')}
   margin-top: 15px;
   padding: 24px 20px 8px;
   background-color: white;
@@ -87,7 +86,7 @@ const UserImg = styled.img`
 `;
 
 const RatingInfo = styled.div`
-  ${({ theme }) => theme.flex("center", null, "column")}
+  ${({ theme }) => theme.flex('center', null, 'column')}
   margin: 0 8px;
   font-size: 13px;
 `;
@@ -108,7 +107,7 @@ const ReviewNote = styled.div`
 `;
 
 const Icons = styled.div`
-  ${({ theme }) => theme.flex("flex-end", "center")};
+  ${({ theme }) => theme.flex('flex-end', 'center')};
   align-self: flex-end;
   margin: 0 16px 8px 0;
   div {
