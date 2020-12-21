@@ -1,18 +1,10 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import ReviewModal from "./ReviewModal";
-import ReviewCard from "./ReviewCard";
-import { starRating } from "../../../Components/tool/tool";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import ReviewModal from './ReviewModal';
+import ReviewCard from './ReviewCard';
+import { starRating } from '../../../Components/tool/tool';
 
-const Review = ({
-  reviewMenu,
-  handleBorder,
-  detail,
-  stars,
-  reviewList,
-  setThumbIndex,
-  setReviewList,
-}) => {
+const Review = ({ reviewMenu, handleBorder, detail, stars, reviewList }) => {
   const { rating, ratings, score } = detail;
 
   const [modalVisible, setModalVisible] = useState(false);
@@ -78,7 +70,7 @@ const Review = ({
               </RatingAvg>
               <Seperator />
               {[5, 4, 3, 2, 1].map((num, i) => (
-                <RatingsFilter key={num}>
+                <RatingsFilter key={i}>
                   <RatingFilter>{stars(num)}</RatingFilter>
                   <Bar>
                     <RatingBar
@@ -124,37 +116,9 @@ const Title = styled.div`
   font-weight: bold;
 `;
 
-const Menu = styled.div`
-  list-style: none;
-`;
-
 const ReviewRating = styled.div`
   display: flex;
   align-items: flex-start;
-`;
-
-const ReviewList = styled.li`
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 10px;
-  color: ${({ selected }) => (selected ? "black" : "#ba1628")};
-  cursor: pointer;
-  :nth-child(1) {
-    border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
-  }
-  :nth-child(2) {
-    border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
-  }
-  :nth-child(3) {
-    border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
-  }
-  :nth-child(4) {
-    border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
-  }
 `;
 
 const CardList = styled.div`
@@ -162,61 +126,7 @@ const CardList = styled.div`
   padding: 0 16px;
 `;
 
-const Card = styled.div`
-  ${({ theme }) => theme.flex("center", null, "column")}
-  margin-top: 15px;
-  padding: 24px 20px 8px;
-  background-color: white;
-  box-shadow: 0 0 6px #ebebeb;
-  border-radius: 10px;
-`;
-
-const ReviewInfo = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const UserImg = styled.img`
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-`;
-
-const RatingInfo = styled.div`
-  ${({ theme }) => theme.flex("center", null, "column")}
-  margin: 0 8px;
-  font-size: 13px;
-`;
-
 const StarBox = styled.div``;
-
-const UserName = styled.div`
-  margin: 4px 0;
-  font-weight: bold;
-`;
-
-const ReviewDate = styled.div``;
-
-const ReviewNote = styled.div`
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: 300;
-`;
-
-const Icons = styled.div`
-  ${({ theme }) => theme.flex("flex-end", "center")};
-  align-self: flex-end;
-  margin: 0 16px 8px 0;
-  div {
-    display: flex;
-  }
-`;
-
-const Thumbsup = styled.div`
-  display: flex;
-  margin: 4px;
-  text-align: center;
-`;
 
 const RatingBox = styled.div`
   width: 25%;
@@ -224,7 +134,7 @@ const RatingBox = styled.div`
 `;
 
 const RatingAvg = styled.div`
-  ${({ theme }) => theme.flex(null, "center")};
+  ${({ theme }) => theme.flex(null, 'center')};
 `;
 
 const Rating = styled.div`
@@ -248,7 +158,7 @@ const Seperator = styled.div`
 `;
 
 const RatingsFilter = styled.div`
-  ${({ theme }) => theme.flex("space-between")}
+  ${({ theme }) => theme.flex('space-between')}
   margin-bottom: 5px;
 `;
 

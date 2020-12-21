@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Editor = ({ detail, title }) => {
   const { editor_note, description } = Object.keys(detail) && detail;
@@ -9,7 +9,7 @@ const Editor = ({ detail, title }) => {
       {Object.keys(detail).length > 0 &&
         (editor_note ? (
           <Container>
-            <EditorNote id="editorNote">
+            <EditorNote id='editorNote'>
               <p>EDITOR NOTE</p>
               {editor_note}
             </EditorNote>
@@ -30,7 +30,7 @@ const Editor = ({ detail, title }) => {
 export default Editor;
 
 const Container = styled.div`
-  ${({ theme }) => theme.flex("center", "center", "column")}
+  ${({ theme }) => theme.flex('center', 'center', 'column')}
   margin: 30px auto 0 auto;
   padding: 32px 150px;
   width: 1216px;

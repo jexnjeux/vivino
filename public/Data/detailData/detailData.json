@@ -12,6 +12,9 @@
     "rating": 3.978494623655914,
     "ratings": 93,
     "price": "28.00",
+    "grape": "Nebbiolo",
+    "alcohol_content": "12.5",
+    "allergen": "Containus sulfites",
     "percentage": null,
     "feature": "Great value for money. Similar wines usually cost 10 times as much",
     "editor_note": "\u201cTrouver des C\u00f4te-R\u00f4tie bons et accessibles est presque mission impossible ! Vivino vous a d\u00e9nich\u00e9 cette p\u00e9pite cach\u00e9e qu'est le C\u00f4te-R\u00f4tie du domaine familial Patrick Jasmin adoub\u00e9 16,5 Bettane+Desseauve.\u201d",
@@ -31,7 +34,6 @@
     "sweet": "60.00",
     "acidic": "50.00",
     "score": [30, 31, 32, 0, 0],
-    "wishlist": false,
     "vintages": [
       {
         "id": 1,

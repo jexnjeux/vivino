@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PurchaseBox from './PurchaseBox';
 import { starRating } from '../../../Components/tool/tool';
@@ -101,7 +101,7 @@ const Top = ({ detail, flag, iconName, iconList, setDetail }) => {
                     <Icon iconName={iconName} bgColor={handleIcon()}>
                       {iconList[handleIcon()]}
                     </Icon>
-                    z<p>{feature}</p>
+                    <p>{feature}</p>
                   </Feature>
                 ) : null}
               </FeatureBox>
