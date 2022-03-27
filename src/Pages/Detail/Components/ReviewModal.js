@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import ReviewCard from "./ReviewCard";
-import { CgClose } from "react-icons/cg";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import ReviewCard from './ReviewCard';
+import { CgClose } from 'react-icons/cg';
 
 const ReviewModal = ({
   visible,
@@ -88,7 +88,7 @@ ReviewModal.propTypes = {
 };
 
 const ModalOverlay = styled.div`
-  pointer-events: ${({ visible }) => (visible ? "initial" : "none")};
+  pointer-events: ${({ visible }) => (visible ? 'initial' : 'none')};
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: all 0.25s ease-in;
   position: fixed;
@@ -101,8 +101,8 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  pointer-events: ${({ visible }) => (visible ? "initial" : "none")};
-  transform: translateY(${({ visible }) => (visible ? "0" : "700px")});
+  pointer-events: ${({ visible }) => (visible ? 'initial' : 'none')};
+  transform: translateY(${({ visible }) => (visible ? '0' : '700px')});
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: all 0.25s ease-in;
   position: fixed;
@@ -116,7 +116,7 @@ const ModalWrapper = styled.div`
 `;
 
 const ModalInner = styled.div`
-  ${({ theme }) => theme.flex(null, null, "column")};
+  ${({ theme }) => theme.flex(null, null, 'column')};
   box-sizing: border-box;
   position: relative;
   box-shadow: 0 0 6px #ebebeb;
@@ -176,7 +176,7 @@ const RatingsFilter = styled.div`
 
 const RatingFilter = styled.div`
   display: flex;
-  width: ${({ noWidth }) => (noWidth ? "" : "80px")};
+  width: ${({ noWidth }) => (noWidth ? '' : '80px')};
 `;
 
 const Counter = styled.div`
@@ -201,7 +201,7 @@ const UserImg = styled.img`
 `;
 
 const RatingInfo = styled.div`
-  ${({ theme }) => theme.flex("center", null, "column")}
+  ${({ theme }) => theme.flex('center', null, 'column')}
   margin: 0 8px;
   font-size: 13px;
 `;
@@ -222,7 +222,7 @@ const ReviewNote = styled.div`
 `;
 
 const Icons = styled.div`
-  ${({ theme }) => theme.flex(null, "center")}
+  ${({ theme }) => theme.flex(null, 'center')}
   align-self: flex-end;
 `;
 
@@ -230,31 +230,31 @@ const ReviewList = styled.li`
   display: inline-block;
   margin-bottom: 20px;
   padding: 10px;
-  color: ${({ selected }) => (selected ? "black" : "#ba1628")};
+  color: ${({ selected }) => (selected ? 'black' : '#ba1628')};
   cursor: pointer;
   :nth-child(1) {
     border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
+      ${({ selected }) => (selected ? 'black' : '#eae0da')};
   }
   :nth-child(2) {
     border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
+      ${({ selected }) => (selected ? 'black' : '#eae0da')};
   }
   :nth-child(3) {
     border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
+      ${({ selected }) => (selected ? 'black' : '#eae0da')};
   }
   :nth-child(4) {
     border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
+      ${({ selected }) => (selected ? 'black' : '#eae0da')};
   }
 `;
 
 const iconStyle = {
-  position: "absolute",
-  width: "24px",
-  height: "24px",
-  right: "0",
+  position: 'absolute',
+  width: '24px',
+  height: '24px',
+  right: '0',
 };
 
 export default ReviewModal;

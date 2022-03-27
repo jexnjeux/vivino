@@ -18,16 +18,15 @@ import {
 import { BsStarFill } from 'react-icons/bs';
 
 const Detail = ({ match }) => {
-  const [detail, setDetail] = useState({});
-
-  const [reviewList, setReviewList] = useState({});
-
   const REVIEW_MENU = {
     Helpful: true,
     Recent: false,
     Friends: false,
     You: false,
   };
+
+  const [detail, setDetail] = useState({});
+  const [reviewList, setReviewList] = useState({});
   const [reviewMenu, setReviewMenu] = useState(REVIEW_MENU);
 
   const handleBorder = (menu) => {
@@ -45,6 +44,7 @@ const Detail = ({ match }) => {
       .then((res) => res.json())
       .then((res) => setDetail(res.product));
   };
+
   const num = match.params.id ? match.params.id : 60;
 
   // const getDetailInfo = () => {

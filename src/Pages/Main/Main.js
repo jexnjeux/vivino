@@ -1,37 +1,36 @@
-import React, {useState, useEffect} from "react";
-import styled from "styled-components";
-import Slider from "../../Components/Slider/Slider";
-import { Btn } from "../../Components/tool/tool";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import Slider from '../../Components/Slider/Slider';
+import { Btn } from '../../Components/tool/tool';
 
 const Main = () => {
-
   const shuffleList = (products) => {
     for (let i = products.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [products[i], products[j]] = [products[j], products[i]];
     }
     return products;
-  }
+  };
 
   const [products, getProducts] = useState([]);
 
-  const toplist = products.filter(({rating}) => rating > 4)
-  const related = shuffleList(products)
-  const editors =products.filter( ({editor_note}) => editor_note !== null )
-  const bestseller = products.filter(({ratings}) => ratings > 100)
-  const affordable = products.filter((({price}) => price < 25 ))
+  const toplist = products.filter(({ rating }) => rating > 4);
+  const related = shuffleList(products);
+  const editors = products.filter(({ editor_note }) => editor_note !== null);
+  const bestseller = products.filter(({ ratings }) => ratings > 100);
+  const affordable = products.filter(({ price }) => price < 25);
 
-  useEffect(() => { 
-    getList();
-  }, []);
+  // useEffect(() => {
+  //   getList();
+  // }, []);
 
-  const getList = () => {
-    fetch("http://10.58.5.243:8000/products")
-      .then((res) => res.json())
-      .then((res) => {
-        getProducts(res.products.result); 
-      });
-  }
+  // const getList = () => {
+  //   fetch("http://10.58.5.243:8000/products")
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       getProducts(res.products.result);
+  //     });
+  // }
 
   return (
     <MainWrap>
@@ -80,7 +79,7 @@ const Main = () => {
         <Subhead>Top-selling wines in France right now.</Subhead>
       </HeadWrap>
       <CompSlider>
-        <Slider products={bestseller}/>
+        <Slider products={bestseller} />
       </CompSlider>
       <BodyWrap>
         <HeadWrap>
@@ -88,7 +87,7 @@ const Main = () => {
           <Subhead>Great wines at great prices</Subhead>
         </HeadWrap>
         <CompSlider>
-          <Slider products={affordable}/>
+          <Slider products={affordable} />
         </CompSlider>
       </BodyWrap>
     </MainWrap>
@@ -99,19 +98,19 @@ export default Main;
 
 const MainWrap = styled.div`
   height: auto;
-  ${({ theme }) => theme.flex("center", "center", "column")};
+  ${({ theme }) => theme.flex('center', 'center', 'column')};
 `;
 
 const MainBannerWrap = styled.div`
   width: auto;
   height: auto;
-  ${({ theme }) => theme.flex("center", "center", "row")};
+  ${({ theme }) => theme.flex('center', 'center', 'row')};
 `;
 
 const MainBanner = styled.div`
   width: 1519px;
   height: 300px;
-  background-image: url("https://www.vivino.com/misc/bazooka/Rioja_2020/web/desktop_FR.jpg");
+  background-image: url('https://www.vivino.com/misc/bazooka/Rioja_2020/web/desktop_FR.jpg');
   background-position: center;
   background-size: cover;
 `;
@@ -152,14 +151,14 @@ const CompSlider = styled.div`
   width: 1232px;
   height: auto;
   line-height: 534px;
-  ${({ theme }) => theme.flex("center", "center", "row")}
+  ${({ theme }) => theme.flex('center', 'center', 'row')}
 `;
 
 const BottomListWrap = styled.div``;
 
 const BtnWrap = styled.div`
   width: 1216px;
-  ${({ theme }) => theme.flex("flex-start", "center", "row")}
+  ${({ theme }) => theme.flex('flex-start', 'center', 'row')}
 `;
 
 const SortingBtnOne = styled(Btn)`
@@ -171,23 +170,23 @@ const SortingBtnOne = styled(Btn)`
   border: 1px solid #a31323;
   color: #ffffff;
   margin: 0 8px 8px 0;
-  background-image: url("/images/coin1.svg");
+  background-image: url('/images/coin1.svg');
   background-size: 20px 16px;
 `;
 
 const SortingBtnTwo = styled(SortingBtnOne)`
   background-color: #ffffff;
-  background-image: url("/images/coin2.svg");
+  background-image: url('/images/coin2.svg');
 `;
 
 const SortingBtnThree = styled(SortingBtnOne)`
   background-color: #ffffff;
-  background-image: url("/images/coin3.svg");
+  background-image: url('/images/coin3.svg');
 `;
 
 const SortingBtnFour = styled(SortingBtnOne)`
   background-color: #ffffff;
-  background-image: url("/images/coin4.svg");
+  background-image: url('/images/coin4.svg');
 `;
 
 const BottomText = styled.div`

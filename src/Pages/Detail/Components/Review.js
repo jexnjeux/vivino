@@ -1,18 +1,10 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import ReviewModal from "./ReviewModal";
-import ReviewCard from "./ReviewCard";
-import { starRating } from "../../../Components/tool/tool";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import ReviewModal from './ReviewModal';
+import ReviewCard from './ReviewCard';
+import { starRating } from '../../../Components/tool/tool';
 
-const Review = ({
-  reviewMenu,
-  handleBorder,
-  detail,
-  stars,
-  reviewList,
-  setThumbIndex,
-  setReviewList,
-}) => {
+const Review = ({ reviewMenu, handleBorder, detail, stars, reviewList }) => {
   const { rating, ratings, score } = detail;
 
   const [modalVisible, setModalVisible] = useState(false);
@@ -137,23 +129,23 @@ const ReviewList = styled.li`
   display: inline-block;
   margin-bottom: 20px;
   padding: 10px;
-  color: ${({ selected }) => (selected ? "black" : "#ba1628")};
+  color: ${({ selected }) => (selected ? 'black' : '#ba1628')};
   cursor: pointer;
   :nth-child(1) {
     border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
+      ${({ selected }) => (selected ? 'black' : '#eae0da')};
   }
   :nth-child(2) {
     border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
+      ${({ selected }) => (selected ? 'black' : '#eae0da')};
   }
   :nth-child(3) {
     border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
+      ${({ selected }) => (selected ? 'black' : '#eae0da')};
   }
   :nth-child(4) {
     border-bottom: 1px solid
-      ${({ selected }) => (selected ? "black" : "#eae0da")};
+      ${({ selected }) => (selected ? 'black' : '#eae0da')};
   }
 `;
 
@@ -163,7 +155,7 @@ const CardList = styled.div`
 `;
 
 const Card = styled.div`
-  ${({ theme }) => theme.flex("center", null, "column")}
+  ${({ theme }) => theme.flex('center', null, 'column')}
   margin-top: 15px;
   padding: 24px 20px 8px;
   background-color: white;
@@ -183,7 +175,7 @@ const UserImg = styled.img`
 `;
 
 const RatingInfo = styled.div`
-  ${({ theme }) => theme.flex("center", null, "column")}
+  ${({ theme }) => theme.flex('center', null, 'column')}
   margin: 0 8px;
   font-size: 13px;
 `;
@@ -204,7 +196,7 @@ const ReviewNote = styled.div`
 `;
 
 const Icons = styled.div`
-  ${({ theme }) => theme.flex("flex-end", "center")};
+  ${({ theme }) => theme.flex('flex-end', 'center')};
   align-self: flex-end;
   margin: 0 16px 8px 0;
   div {
@@ -224,7 +216,7 @@ const RatingBox = styled.div`
 `;
 
 const RatingAvg = styled.div`
-  ${({ theme }) => theme.flex(null, "center")};
+  ${({ theme }) => theme.flex(null, 'center')};
 `;
 
 const Rating = styled.div`
@@ -248,7 +240,7 @@ const Seperator = styled.div`
 `;
 
 const RatingsFilter = styled.div`
-  ${({ theme }) => theme.flex("space-between")}
+  ${({ theme }) => theme.flex('space-between')}
   margin-bottom: 5px;
 `;
 

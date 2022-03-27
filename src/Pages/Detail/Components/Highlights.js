@@ -6,11 +6,12 @@ import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 const Highlights = ({ detail, highlightList, HighligtColor }) => {
   const { highlight } = detail;
 
-  const handleHighlight = (item) => {
+  const handleHighlight = () => {
     return Object.keys(highlightList)?.filter(
       (item) => highlight.indexOf(item) !== -1
     );
   };
+
   console.log(highlightList);
   return (
     <>

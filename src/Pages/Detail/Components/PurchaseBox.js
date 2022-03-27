@@ -1,33 +1,37 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Btn } from "../../../Components/tool/tool";
-import { RiShoppingCart2Line } from "react-icons/ri";
-import { FiTruck } from "react-icons/fi";
-import { BiStore } from "react-icons/bi";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Btn } from '../../../Components/tool/tool';
+import { RiShoppingCart2Line } from 'react-icons/ri';
+import { FiTruck } from 'react-icons/fi';
+import { BiStore } from 'react-icons/bi';
 
 const PurchaseBox = ({ detail }) => {
   const [quantity, setQuantity] = useState(6);
   const { percentage, price, merchant, editor_note } =
     Object.keys(detail) && detail;
 
-  const discountCalc = (price, percent) => {
-    return parseInt(price * 1 * (1 - percent * 0.01 * 1));
+  const calcDiscount = (price, percent) => {
+    const discountRate = 1 - percent * 0.01;
+
+    return parseInt(Number(price) * discountRate);
   };
 
-  const priceCalc = (quantity, price) => {
-    return quantity * 1 * (price * 1);
+  const calcPrice = (quantity, price) => {
+    return Number(quantity) * Number(price);
   };
 
-  const freeDeliveryCalc = (quantity, price) => {
-    return 250 - quantity * 1 * (price * 1);
+  const calcFreeShipping = (quantity, price) => {
+    const freeShippingCondition = 250;
+
+    return freeShippingCondition - calcPrice(quantity, price);
   };
 
   const AddToCart = () => {
     fetch(`http://10.58.3.209:8000/orders/carts`, {
-      method: "POST",
+      method: 'POST',
       headers: {
         Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.Qq0oXYANstjhyDGnyKR658yxUNeE4R36ERuodLf0aMk",
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.Qq0oXYANstjhyDGnyKR658yxUNeE4R36ERuodLf0aMk',
       },
       body: JSON.stringify({
         vintage_id: detail.id,
@@ -55,7 +59,7 @@ const PurchaseBox = ({ detail }) => {
               ) : (
                 <Price>
                   <SalePrice>
-                    €{percentage ? discountCalc(price, percentage) : price}
+                    €{percentage ? calcDiscount(price, percentage) : price}
                   </SalePrice>
                   <DiscountPrice>€{price}</DiscountPrice>
                 </Price>
@@ -64,16 +68,16 @@ const PurchaseBox = ({ detail }) => {
             </PricePerBottle>
             <SelectQuantity>
               <PlusMinusButton
-                topLeft="4px"
-                bottomLeft="4px"
+                topLeft='4px'
+                bottomLeft='4px'
                 onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
               >
                 -
               </PlusMinusButton>
               <Quantity>{quantity}</Quantity>
               <PlusMinusButton
-                topRight="4px"
-                bottomRight="4px"
+                topRight='4px'
+                bottomRight='4px'
                 onClick={() => setQuantity(quantity + 1)}
               >
                 +
@@ -83,22 +87,22 @@ const PurchaseBox = ({ detail }) => {
           </Purchase>
           <Policies>
             <Policy>
-              <RiShoppingCart2Line style={{ width: "30px" }} />
+              <RiShoppingCart2Line style={{ width: '30px' }} />
               <p>
-                {priceCalc(quantity, price) >= 250
+                {calcPrice(quantity, price) >= 250
                   ? `You have FREE shipping from ${merchant}. Are you getting the most of it ?`
-                  : `Free shipping for orders of 9 bottles or more, or over ${freeDeliveryCalc(
+                  : `Free shipping for orders of 9 bottles or more, or over ${calcFreeShipping(
                       quantity,
                       price
                     ).toFixed(2)}`}
               </p>
             </Policy>
             <Policy>
-              <FiTruck style={{ width: "30px" }} />
+              <FiTruck style={{ width: '30px' }} />
               <p>Estimated between Wed, Oct 07 and Thu, Oct 08</p>
             </Policy>
             <Policy>
-              <BiStore style={{ width: "30px" }} />
+              <BiStore style={{ width: '30px' }} />
               <p>Sold by {merchant}</p>
             </Policy>
           </Policies>
@@ -111,7 +115,7 @@ const PurchaseBox = ({ detail }) => {
 export default PurchaseBox;
 
 const Box = styled.div`
-  /* ${({ theme }) => theme.flex(null, null, "column")} */
+  /* ${({ theme }) => theme.flex(null, null, 'column')} */
   width: 33%;
   box-shadow: 0 0 10px #ebebeb;
 `;
@@ -131,7 +135,7 @@ const EditorPick = styled.div`
 `;
 
 const Purchase = styled.div`
-  ${({ theme }) => theme.flex(null, "center", "column")}
+  ${({ theme }) => theme.flex(null, 'center', 'column')}
   padding: 24px;
   background-color: white;
   border-top-left-radius: 4px;
@@ -139,7 +143,7 @@ const Purchase = styled.div`
 `;
 
 const PricePerBottle = styled.div`
-  ${({ theme }) => theme.flex(null, null, "column")}
+  ${({ theme }) => theme.flex(null, null, 'column')}
   align-self: flex-start;
   p {
     margin-bottom: 32px;
@@ -147,7 +151,7 @@ const PricePerBottle = styled.div`
 `;
 
 const Price = styled.div`
-  ${({ theme }) => theme.flex(null, "center")}
+  ${({ theme }) => theme.flex(null, 'center')}
   margin-bottom: 8px;
   p {
     font-size: 12px;

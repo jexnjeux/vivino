@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { starRating } from "../../../Components/tool/tool";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { starRating } from '../../../Components/tool/tool';
 
 const VintageRow = ({
   iconName,
@@ -11,30 +11,34 @@ const VintageRow = ({
 }) => {
   const { feature } = detail;
   const [filterData, setFilterData] = useState([]);
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    fetch("/Data/detailData/detailData.json")
+    fetch('/Data/detailData/detailData.json')
       .then((res) => res.json())
       .then((res) => setFilterData(res.product.vintages));
   }, []);
 
   useEffect(() => {
-    if (vintageSort === "Most popular") {
-      setFilterData(filterData.sort((a, b) => b.rating - a.rating));
-      setFilter(vintageSort);
-    } else if (vintageSort === "Year") {
-      setFilterData(filterData.sort((a, b) => b.year - a.year));
-      setFilter(vintageSort);
-    } else if (vintageSort === "Lowest price first") {
-      setFilterData(filterData.sort((a, b) => a.price - b.price));
-      setFilter(vintageSort);
-    } else if (vintageSort === "Highest price first") {
-      setFilterData(filterData.sort((a, b) => b.price - a.price));
-      setFilter(vintageSort);
-    } else if (vintageSort === "Highest user rating") {
-      setFilterData(filterData.sort((a, b) => b.ratings - a.ratings));
-      setFilter(vintageSort);
+    const handleFilter = (category, sort, asc = false) => {
+      if (asc) {
+        setFilterData(filterData.sort((a, b) => a[category] - b[category]));
+      } else {
+        setFilterData(filterData.sort((a, b) => b[category] - a[category]));
+      }
+      setFilter(sort);
+    };
+
+    if (vintageSort === 'Most popular') {
+      handleFilter('rating', vintageSort);
+    } else if (vintageSort === 'Year') {
+      handleFilter('year', vintageSort);
+    } else if (vintageSort === 'Lowest price first') {
+      handleFilter('price', vintageSort, true);
+    } else if (vintageSort === 'Highest price first') {
+      handleFilter('price', vintageSort);
+    } else if (vintageSort === 'Highest user rating') {
+      handleFilter('rating', vintageSort);
     }
   }, [filterData, vintageSort]);
 
@@ -121,7 +125,7 @@ const Price = styled.div`
 `;
 
 const Feature = styled.div`
-  ${({ theme }) => theme.flex(null, "center")}
+  ${({ theme }) => theme.flex(null, 'center')}
   padding: 0 16px;
   width: 25%;
   height: 30px;
@@ -135,7 +139,7 @@ const Feature = styled.div`
 `;
 
 const Icon = styled.span`
-  ${({ theme }) => theme.flex("center", "center")}
+  ${({ theme }) => theme.flex('center', 'center')}
   width: 24px;
   height: 24px;
   margin-left: 5px;
